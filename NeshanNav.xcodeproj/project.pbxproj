@@ -21,7 +21,6 @@
 		704D275626A58A8D001D3E24 /* MapViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D275526A58A8D001D3E24 /* MapViewModelDelegate.swift */; };
 		704D275926A58AA5001D3E24 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D275826A58AA5001D3E24 /* MapView.swift */; };
 		704D275B26A58AC0001D3E24 /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D275A26A58AC0001D3E24 /* MapViewDelegate.swift */; };
-		704D276926A58B59001D3E24 /* Font in Resources */ = {isa = PBXBuildFile; fileRef = 704D276826A58B59001D3E24 /* Font */; };
 		704D276C26A58BC0001D3E24 /* BillboardUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D276B26A58BC0001D3E24 /* BillboardUseCases.swift */; };
 		704D276E26A58BD8001D3E24 /* BillboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D276D26A58BD8001D3E24 /* BillboardRouter.swift */; };
 		704D277026A58BE6001D3E24 /* BillboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D276F26A58BE6001D3E24 /* BillboardView.swift */; };
@@ -49,6 +48,15 @@
 		704D27A226A58DB6001D3E24 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D27A126A58DB6001D3E24 /* UIViewController.swift */; };
 		704D27A426A58DC6001D3E24 /* NTCTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D27A326A58DC6001D3E24 /* NTCTAButton.swift */; };
 		704D27A626A58DD8001D3E24 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D27A526A58DD8001D3E24 /* UITextField.swift */; };
+		704D27B026A58E81001D3E24 /* IRANYekanMobileExtraBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 704D27A826A58E80001D3E24 /* IRANYekanMobileExtraBlack.ttf */; };
+		704D27B126A58E81001D3E24 /* IRANYekanMobileLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 704D27A926A58E80001D3E24 /* IRANYekanMobileLight.ttf */; };
+		704D27B226A58E81001D3E24 /* IRANYekanMobileBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 704D27AA26A58E81001D3E24 /* IRANYekanMobileBlack.ttf */; };
+		704D27B326A58E81001D3E24 /* IRANYekanMobileBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 704D27AB26A58E81001D3E24 /* IRANYekanMobileBold.ttf */; };
+		704D27B426A58E81001D3E24 /* IRANYekanMobileRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 704D27AC26A58E81001D3E24 /* IRANYekanMobileRegular.ttf */; };
+		704D27B526A58E81001D3E24 /* IRANYekanMobileExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 704D27AD26A58E81001D3E24 /* IRANYekanMobileExtraBold.ttf */; };
+		704D27B626A58E81001D3E24 /* IRANYekanMobileThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 704D27AE26A58E81001D3E24 /* IRANYekanMobileThin.ttf */; };
+		704D27B726A58E81001D3E24 /* IRANYekanMobileMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 704D27AF26A58E81001D3E24 /* IRANYekanMobileMedium.ttf */; };
+		704D27B926A58E92001D3E24 /* neshan.license in Resources */ = {isa = PBXBuildFile; fileRef = 704D27B826A58E92001D3E24 /* neshan.license */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,7 +78,6 @@
 		704D275526A58A8D001D3E24 /* MapViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelDelegate.swift; sourceTree = "<group>"; };
 		704D275826A58AA5001D3E24 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		704D275A26A58AC0001D3E24 /* MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewDelegate.swift; sourceTree = "<group>"; };
-		704D276826A58B59001D3E24 /* Font */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Font; sourceTree = "<group>"; };
 		704D276B26A58BC0001D3E24 /* BillboardUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillboardUseCases.swift; sourceTree = "<group>"; };
 		704D276D26A58BD8001D3E24 /* BillboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillboardRouter.swift; sourceTree = "<group>"; };
 		704D276F26A58BE6001D3E24 /* BillboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillboardView.swift; sourceTree = "<group>"; };
@@ -98,6 +105,15 @@
 		704D27A126A58DB6001D3E24 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		704D27A326A58DC6001D3E24 /* NTCTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTCTAButton.swift; sourceTree = "<group>"; };
 		704D27A526A58DD8001D3E24 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		704D27A826A58E80001D3E24 /* IRANYekanMobileExtraBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileExtraBlack.ttf; sourceTree = "<group>"; };
+		704D27A926A58E80001D3E24 /* IRANYekanMobileLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileLight.ttf; sourceTree = "<group>"; };
+		704D27AA26A58E81001D3E24 /* IRANYekanMobileBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileBlack.ttf; sourceTree = "<group>"; };
+		704D27AB26A58E81001D3E24 /* IRANYekanMobileBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileBold.ttf; sourceTree = "<group>"; };
+		704D27AC26A58E81001D3E24 /* IRANYekanMobileRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileRegular.ttf; sourceTree = "<group>"; };
+		704D27AD26A58E81001D3E24 /* IRANYekanMobileExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileExtraBold.ttf; sourceTree = "<group>"; };
+		704D27AE26A58E81001D3E24 /* IRANYekanMobileThin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileThin.ttf; sourceTree = "<group>"; };
+		704D27AF26A58E81001D3E24 /* IRANYekanMobileMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileMedium.ttf; sourceTree = "<group>"; };
+		704D27B826A58E92001D3E24 /* neshan.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neshan.license; sourceTree = "<group>"; };
 		A3EC6B53FCABAD45F9A4B5FB /* Pods-NeshanNav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeshanNav.release.xcconfig"; path = "Target Support Files/Pods-NeshanNav/Pods-NeshanNav.release.xcconfig"; sourceTree = "<group>"; };
 		F2F371B7A1DE9F42754E5F5C /* Pods_NeshanNav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeshanNav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,9 +151,10 @@
 		7023487526A586200018B60A /* NeshanNav */ = {
 			isa = PBXGroup;
 			children = (
+				704D27B826A58E92001D3E24 /* neshan.license */,
+				704D27A726A58E71001D3E24 /* Font */,
 				7023489026A588360018B60A /* CodeBase */,
 				7023488F26A5882E0018B60A /* App */,
-				704D276826A58B59001D3E24 /* Font */,
 				7023488D26A5864B0018B60A /* HelperOBJC */,
 				7023487C26A586200018B60A /* Main.storyboard */,
 				7023487F26A586220018B60A /* Assets.xcassets */,
@@ -169,14 +186,14 @@
 		7023489026A588360018B60A /* CodeBase */ = {
 			isa = PBXGroup;
 			children = (
-				704D279E26A58D8F001D3E24 /* Utils */,
-				704D279B26A58D72001D3E24 /* LocationManager */,
-				704D279226A58D20001D3E24 /* NetworkLayer */,
-				704D278926A58CDA001D3E24 /* Repository */,
-				704D277326A58C06001D3E24 /* SearchView */,
-				704D276A26A58BA8001D3E24 /* Billboard */,
-				704D274C26A58A04001D3E24 /* MapView */,
 				704D274926A589E2001D3E24 /* Coordinator */,
+				704D274C26A58A04001D3E24 /* MapView */,
+				704D276A26A58BA8001D3E24 /* Billboard */,
+				704D277326A58C06001D3E24 /* SearchView */,
+				704D278926A58CDA001D3E24 /* Repository */,
+				704D279226A58D20001D3E24 /* NetworkLayer */,
+				704D279B26A58D72001D3E24 /* LocationManager */,
+				704D279E26A58D8F001D3E24 /* Utils */,
 			);
 			path = CodeBase;
 			sourceTree = "<group>";
@@ -229,10 +246,9 @@
 		704D276A26A58BA8001D3E24 /* Billboard */ = {
 			isa = PBXGroup;
 			children = (
-				704D276B26A58BC0001D3E24 /* BillboardUseCases.swift */,
-				704D276D26A58BD8001D3E24 /* BillboardRouter.swift */,
-				704D276F26A58BE6001D3E24 /* BillboardView.swift */,
-				704D277126A58BF0001D3E24 /* BillboardDelegate.swift */,
+				704D27BC26A59085001D3E24 /* View */,
+				704D27BB26A5907D001D3E24 /* Router */,
+				704D27BA26A59076001D3E24 /* UseCase */,
 			);
 			path = Billboard;
 			sourceTree = "<group>";
@@ -240,14 +256,11 @@
 		704D277326A58C06001D3E24 /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
-				704D277426A58C24001D3E24 /* SearchUseCases.swift */,
-				704D277626A58C2D001D3E24 /* SearchRouter.swift */,
-				704D277826A58C3B001D3E24 /* SearchModel.swift */,
-				704D277A26A58C50001D3E24 /* SearchViewModel.swift */,
-				704D277C26A58C5E001D3E24 /* SearchView.swift */,
-				704D277E26A58C76001D3E24 /* SearchViewDelegate.swift */,
-				704D278026A58C84001D3E24 /* SearchViewTextFieldDelegate.swift */,
-				704D278226A58C92001D3E24 /* CollectionView */,
+				704D27BE26A5909D001D3E24 /* UseCase */,
+				704D27BF26A590A4001D3E24 /* Router */,
+				704D27C126A590B8001D3E24 /* Model */,
+				704D27BD26A59092001D3E24 /* View */,
+				704D27C026A590AB001D3E24 /* ViewModel */,
 			);
 			path = SearchView;
 			sourceTree = "<group>";
@@ -301,6 +314,89 @@
 				704D27A526A58DD8001D3E24 /* UITextField.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		704D27A726A58E71001D3E24 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				704D27AA26A58E81001D3E24 /* IRANYekanMobileBlack.ttf */,
+				704D27AB26A58E81001D3E24 /* IRANYekanMobileBold.ttf */,
+				704D27A826A58E80001D3E24 /* IRANYekanMobileExtraBlack.ttf */,
+				704D27AD26A58E81001D3E24 /* IRANYekanMobileExtraBold.ttf */,
+				704D27A926A58E80001D3E24 /* IRANYekanMobileLight.ttf */,
+				704D27AF26A58E81001D3E24 /* IRANYekanMobileMedium.ttf */,
+				704D27AC26A58E81001D3E24 /* IRANYekanMobileRegular.ttf */,
+				704D27AE26A58E81001D3E24 /* IRANYekanMobileThin.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		704D27BA26A59076001D3E24 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				704D276B26A58BC0001D3E24 /* BillboardUseCases.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		704D27BB26A5907D001D3E24 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				704D276D26A58BD8001D3E24 /* BillboardRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		704D27BC26A59085001D3E24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				704D276F26A58BE6001D3E24 /* BillboardView.swift */,
+				704D277126A58BF0001D3E24 /* BillboardDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		704D27BD26A59092001D3E24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				704D277C26A58C5E001D3E24 /* SearchView.swift */,
+				704D277E26A58C76001D3E24 /* SearchViewDelegate.swift */,
+				704D278026A58C84001D3E24 /* SearchViewTextFieldDelegate.swift */,
+				704D278226A58C92001D3E24 /* CollectionView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		704D27BE26A5909D001D3E24 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				704D277426A58C24001D3E24 /* SearchUseCases.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		704D27BF26A590A4001D3E24 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				704D277626A58C2D001D3E24 /* SearchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		704D27C026A590AB001D3E24 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				704D277A26A58C50001D3E24 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		704D27C126A590B8001D3E24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				704D277826A58C3B001D3E24 /* SearchModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A6087BAFC6B4B9EC4100C842 /* Pods */ = {
@@ -379,10 +475,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				704D276926A58B59001D3E24 /* Font in Resources */,
+				704D27B626A58E81001D3E24 /* IRANYekanMobileThin.ttf in Resources */,
+				704D27B026A58E81001D3E24 /* IRANYekanMobileExtraBlack.ttf in Resources */,
 				7023488326A586220018B60A /* LaunchScreen.storyboard in Resources */,
+				704D27B426A58E81001D3E24 /* IRANYekanMobileRegular.ttf in Resources */,
+				704D27B126A58E81001D3E24 /* IRANYekanMobileLight.ttf in Resources */,
 				7023488026A586220018B60A /* Assets.xcassets in Resources */,
+				704D27B926A58E92001D3E24 /* neshan.license in Resources */,
 				7023487E26A586200018B60A /* Main.storyboard in Resources */,
+				704D27B526A58E81001D3E24 /* IRANYekanMobileExtraBold.ttf in Resources */,
+				704D27B726A58E81001D3E24 /* IRANYekanMobileMedium.ttf in Resources */,
+				704D27B326A58E81001D3E24 /* IRANYekanMobileBold.ttf in Resources */,
+				704D27B226A58E81001D3E24 /* IRANYekanMobileBlack.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
