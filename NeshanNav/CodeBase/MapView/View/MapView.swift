@@ -90,7 +90,6 @@ class MapView: UIViewController{
     fileprivate func initSetup(){
         setupUIView()
         setupUILayout()
-        setupUIEvent()
         setupBillboardView()
         setupSearchView()
         setupMapView()
@@ -129,17 +128,6 @@ class MapView: UIViewController{
                                    height: view.frame.height)
         
         print("✅ MapView : setup UILayouts completed.")
-    }
-    
-    
-    // MARK: Setup UI Event ( Target-Action)
-    fileprivate func setupUIEvent(){
-        //liveLocationButton.addTarget(self, action: #selector(liveLocationButtonTapped(_:)), for: .touchUpInside)
-        print("✅ MapView : setup UIEvent completed.")
-    }
-    @objc private func liveLocationButtonTapped(_ sender: Any){
-        locationManagerDelegate.StartUpdatingUserLocation()
-        viewModel.cameraMoveToUserLocation()
     }
     
     
