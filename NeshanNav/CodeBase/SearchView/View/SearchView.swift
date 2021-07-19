@@ -104,6 +104,7 @@ class SearchView: UIViewController {
         let image = UIImage(named: "LiveLocationIcon")
         button.setBackgroundImage(image, for: .normal)
         button.tintColor = UIColor.systemRed
+        button.clipsToBounds = true
         return button
     }()
     
@@ -112,6 +113,15 @@ class SearchView: UIViewController {
         ai.color = .darkText
         ai.hidesWhenStopped = true
         return ai
+    }()
+    
+    var quickAddressStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis          = NSLayoutConstraint.Axis.horizontal
+        stackView.distribution  = UIStackView.Distribution.fill
+        stackView.alignment     = UIStackView.Alignment.center
+        stackView.spacing       = 12
+        return stackView
     }()
     
     // MARK: - initials Setup For Practice VC
@@ -124,13 +134,16 @@ class SearchView: UIViewController {
     
     // MARK: Setup UIView
     private func setupUIView(){
+            
         // Mark: - Add Container View
-        self.view.addSubview(searchTextFeild)
-        self.view.addSubview(liveUserLocationButton)
-        self.view.addSubview(activityIndactor)
+        view.addSubview(searchTextFeild)
+        view.addSubview(liveUserLocationButton)
 
-        self.view.addSubview(ContainerView)
-        self.ContainerView.addSubview(searchListCollectionView)
+        view.addSubview(ContainerView)
+        ContainerView.addSubview(searchListCollectionView)
+        ContainerView.addSubview(quickAddressStackView)
+        view.addSubview(activityIndactor)
+
         print("✅ SearchView : setup UIView Completed.")
     }
     
@@ -157,6 +170,7 @@ class SearchView: UIViewController {
                              paddingRight: 0.0,
                              cornerRadius: 25)
         
+        
         searchListCollectionView.anchor(top: ContainerView.topAnchor,
                                       left: ContainerView.leftAnchor,
                                       bottom: ContainerView.safeAreaLayoutGuide.bottomAnchor,
@@ -166,7 +180,7 @@ class SearchView: UIViewController {
                                       paddingRight: 0.0,
                                       cornerRadius: 0.0)
         
-        activityIndactor.center = self.view.center
+        activityIndactor.center = view.center
         print("✅ SearchView : setup UILayouts Completed.")
     }
     

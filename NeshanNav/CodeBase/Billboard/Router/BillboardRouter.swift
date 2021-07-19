@@ -10,6 +10,7 @@ import Foundation
 
 final class BillboardRouter: BilboardUseCases{
     
+    var ExitTapped: (() -> Void)?    
     var CTATapped: (() -> ())?
     
     // MARK: UI Element
@@ -21,19 +22,6 @@ final class BillboardRouter: BilboardUseCases{
         self.viewModel = viewModel
     }
     
-//    func startNavigateOnMap() {
-//        viewModel?.startNavigateOnRoutes()
-//    }
-//    
-    func closeBillboard() {
-        viewModel?.cleanMapViewLayer()
-        billboardChangetTo(height: 0.0)
-    }
-//    
-//    func findDirectionRoutes() {
-//        viewModel?.startFindingRoute()
-//    }
-    
     func billboardChangetTo(height: CGFloat) {
         guard let view = view else{
             print("🔴 BillboardRouter: view not set.")
@@ -44,9 +32,7 @@ final class BillboardRouter: BilboardUseCases{
                 self.billboardView?.frame.origin.y = view.frame.height - height
             })
         }
-    }
-    
-    
+    }    
     
     deinit {
         print("🗑 BillboardRouter: deinit frome memory.")

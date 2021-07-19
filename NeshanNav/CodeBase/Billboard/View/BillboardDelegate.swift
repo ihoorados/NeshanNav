@@ -12,7 +12,7 @@ protocol BillboardDelegate: AnyObject {
     func updateViewDataModel(with distance: Element)
     func updateViewToNavigateState()
     func isLoading(loading:Bool)
-    func updateViewDataWithError(retry: @escaping () -> ())
+    func updateViewDataWithError()
 }
 
 extension BillboardView: BillboardDelegate{
@@ -71,10 +71,9 @@ extension BillboardView: BillboardDelegate{
         }
     }
     
-    func updateViewDataWithError(retry: @escaping () -> ()) {
+    func updateViewDataWithError() {
         // Update Route Info Here
         // UI Element should update in main thread
-        retryRequest = retry
         DispatchQueue.main.async {
             self.titleLabel.text = "مجددا تلاش کنید"
             self.spinner.stopAnimating()

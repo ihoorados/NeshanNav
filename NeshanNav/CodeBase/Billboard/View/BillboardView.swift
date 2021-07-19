@@ -13,7 +13,6 @@ class BillboardView: UIViewController {
     /*
              - BilboardUseCases
      */
-    var retryRequest: (() -> ())?
     weak var delegate: BilboardUseCases?
     init(delegate: BilboardUseCases?) {
         self.delegate = delegate
@@ -127,11 +126,13 @@ class BillboardView: UIViewController {
 
         view.addSubview(closeBillboardButton)
         view.addSubview(titleLabel)
+        view.addSubview(CTAButton)
+        view.addSubview(spinner)
+        
+        
         
         view.addSubview(routeNameStackView)
         view.addSubview(routeAddressStackView)
-        view.addSubview(CTAButton)
-        view.addSubview(spinner)
         
         routeNameStackView.addArrangedSubview(routeNameLabel)
         routeNameStackView.addArrangedSubview(routeNameIcon)
@@ -188,7 +189,8 @@ class BillboardView: UIViewController {
     }
     
     @objc func closeBillboardTapped(){
-        delegate?.closeBillboard()
+        delegate?.ExitTapped?()
+        delegate?.billboardChangetTo(height: 0)
     }
     
     @objc func CTAButtonTapped(sender: UIButton){

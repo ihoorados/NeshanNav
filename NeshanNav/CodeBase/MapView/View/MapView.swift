@@ -198,12 +198,14 @@ class MapView: UIViewController{
         let router = BillboardRouter(viewModel: viewModel)
         router.billboardView = billboardContainerView
         router.view = view
-        
+        router.ExitTapped = { [weak self] in
+            self?.cleanMapViewLayers()
+        }
         let vc : BillboardView = BillboardView(delegate: router)
         
         viewModel.billboardRouter = router
         viewModel.billboardDelegate = vc
-
+        
         addVCToContainer(vc: vc, to: billboardContainerView)
         print("✅ MapView : setup Billboard View completed.")
     }

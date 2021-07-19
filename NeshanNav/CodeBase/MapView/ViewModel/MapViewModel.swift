@@ -44,17 +44,18 @@ class MapViewViewModel{
     func requestForLocationInfo(with location:Location){
         billboardDelegate?.isLoading(loading: true)
         locationRepo.getLocationInfoOverNetwork(at: location) { [weak self] result in
+            self?.billboardDelegate?.isLoading(loading: false)
             switch result{
                 case .success(let data):
-                    self?.billboardDelegate?.isLoading(loading: false)
                     self?.billboardDelegate?.updateViewDataModel(with: data)
                     self?.billboardRouter?.CTATapped = { [weak self] in
                         self?.startFindingRoute()
                     }
                 case.failure(_):
-                    self?.billboardDelegate?.updateViewDataWithError(retry: {
+                    self?.billboardDelegate?.updateViewDataWithError()
+                    self?.billboardRouter?.CTATapped = { [weak self] in
                         self?.requestForLocationInfo(with: location)
-                    })
+                    }
             }
         }
     }
@@ -64,11 +65,12 @@ class MapViewViewModel{
         routesRepo.getRouteInfoOverNetwork(pointA: from, PointB: to) { [weak self] result in
             switch result {
                 case .success(let routes):
-                    self?.showRouteShape(route: routes)
+                    self?.showRouteShape(routes: routes)
                 case .failure(_):
-                    self?.billboardDelegate?.updateViewDataWithError(retry: {
+                    self?.billboardDelegate?.updateViewDataWithError()
+                    self?.billboardRouter?.CTATapped = { [weak self] in
                         self?.requestForRoutes(from: from,to: to)
-                    })
+                    }
             }
         }
     }
@@ -79,11 +81,11 @@ class MapViewViewModel{
             self?.billboardDelegate?.isLoading(loading: false)
             switch result {
                 case .success(let distance):
-                    
                     guard let element = distance.rows.first?.elements.first else {
-                        self?.billboardDelegate?.updateViewDataWithError(retry: {
+                        self?.billboardDelegate?.updateViewDataWithError()
+                        self?.billboardRouter?.CTATapped = { [weak self] in
                             self?.requestForDistance(from: from,to: to)
-                        })
+                        }
                         return
                     }
                     self?.billboardDelegate?.updateViewDataModel(with: element)
@@ -91,18 +93,21 @@ class MapViewViewModel{
                         self?.startNavigateOnRoutes()
                     }
                 case .failure(_):
-                    self?.billboardDelegate?.updateViewDataWithError(retry: {
+                    self?.billboardDelegate?.updateViewDataWithError()
+                    self?.billboardRouter?.CTATapped = { [weak self] in
                         self?.requestForDistance(from: from,to: to)
-                    })
+                    }
             }
         }
     }
     
     
-    private func showRouteShape(route:Routes){
+    private func showRouteShape(routes:Routes){
+        
         // Create New Route Locations
         routesLocations.removeAll()
-        let locations = getLocationsForrouteShape(for: route)
+        
+        let locations = getLocationsForrouteShape(for: routes)
         routesLocations.append(contentsOf: locations)
         // Draw Route Shape On Map View
         mapViewDelegate?.addRouteShape(locs: routesLocations)
