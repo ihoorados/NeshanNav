@@ -1,0 +1,68 @@
+//
+//  LocationManager.swift
+//  NeshanNav
+//
+//  Created by Hoorad Ramezani on 7/19/21.
+//
+
+import Foundation
+import CoreLocation
+
+
+protocol LocationManagerDelegate: AnyObject {
+    func StartUpdatingUserLocation()
+    func StopUpdatingUserLocation()
+    func CheckLocationPermission()
+    var  didUpdateLocationsAction: ((_ location: CLLocation) -> Void)?  { get set }
+}
+
+class LocationManager:NSObject, CLLocationManagerDelegate,LocationManagerDelegate{
+    
+    // MARK: Call Back Action
+    var didUpdateLocationsAction:((_ location:CLLocation)->Void)?
+    
+    //MARK: Location Manager
+    var locationManager: CLLocationManager
+    init(locationManager: CLLocationManager = CLLocationManager()) {
+        self.locationManager = locationManager
+        super.init()
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+    }
+    
+    func StartUpdatingUserLocation(){
+        locationManager.startUpdatingLocation()
+    }
+    
+    func StopUpdatingUserLocation(){
+        locationManager.stopUpdatingLocation()
+    }
+    
+    func CheckLocationPermission(){
+        if CLLocationManager.locationServicesEnabled() {
+            switch CLLocationManager.authorizationStatus() {
+                case .notDetermined, .restricted, .denied:
+                    print("🔴 MapView: No access To Location Service")
+                    locationManager.requestWhenInUseAuthorization()
+                case .authorizedAlways, .authorizedWhenInUse:
+                    print("🟢 MapView: Access To Location Service.")
+                @unknown default:
+                break
+            }
+        } else {
+                print("🔵 MapView: Location services are not enabled")
+                locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Location Manager Delegate Fail With erro : \(error)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else {
+            return
+        }
+        didUpdateLocationsAction?(location)
+    }
+}
