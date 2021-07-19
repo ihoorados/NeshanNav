@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D7E99C4371E24A4D125127E /* Pods_NeshanNav.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F371B7A1DE9F42754E5F5C /* Pods_NeshanNav.framework */; };
 		7023487726A586200018B60A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023487626A586200018B60A /* AppDelegate.swift */; };
 		7023487926A586200018B60A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023487826A586200018B60A /* SceneDelegate.swift */; };
 		7023487B26A586200018B60A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023487A26A586200018B60A /* ViewController.swift */; };
 		7023487E26A586200018B60A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7023487C26A586200018B60A /* Main.storyboard */; };
 		7023488026A586220018B60A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7023487F26A586220018B60A /* Assets.xcassets */; };
 		7023488326A586220018B60A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7023488126A586220018B60A /* LaunchScreen.storyboard */; };
+		7023488C26A5863C0018B60A /* NeshanHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7023488B26A5863C0018B60A /* NeshanHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		193DC77630801FA0314E35BA /* Pods-NeshanNav.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeshanNav.debug.xcconfig"; path = "Target Support Files/Pods-NeshanNav/Pods-NeshanNav.debug.xcconfig"; sourceTree = "<group>"; };
 		7023487326A586200018B60A /* NeshanNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeshanNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7023487626A586200018B60A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7023487826A586200018B60A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,11 @@
 		7023487F26A586220018B60A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7023488226A586220018B60A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7023488426A586220018B60A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7023488A26A5863C0018B60A /* NeshanNav-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NeshanNav-Bridging-Header.h"; sourceTree = "<group>"; };
+		7023488B26A5863C0018B60A /* NeshanHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeshanHelper.m; sourceTree = "<group>"; };
+		7023488E26A586610018B60A /* NeshanHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeshanHelper.h; sourceTree = "<group>"; };
+		A3EC6B53FCABAD45F9A4B5FB /* Pods-NeshanNav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeshanNav.release.xcconfig"; path = "Target Support Files/Pods-NeshanNav/Pods-NeshanNav.release.xcconfig"; sourceTree = "<group>"; };
+		F2F371B7A1DE9F42754E5F5C /* Pods_NeshanNav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeshanNav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7E99C4371E24A4D125127E /* Pods_NeshanNav.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				7023487526A586200018B60A /* NeshanNav */,
 				7023487426A586200018B60A /* Products */,
+				A6087BAFC6B4B9EC4100C842 /* Pods */,
+				B6ED80A09D8C90772830C42B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +67,7 @@
 		7023487526A586200018B60A /* NeshanNav */ = {
 			isa = PBXGroup;
 			children = (
+				7023488D26A5864B0018B60A /* HelperOBJC */,
 				7023487626A586200018B60A /* AppDelegate.swift */,
 				7023487826A586200018B60A /* SceneDelegate.swift */,
 				7023487A26A586200018B60A /* ViewController.swift */,
@@ -67,6 +79,34 @@
 			path = NeshanNav;
 			sourceTree = "<group>";
 		};
+		7023488D26A5864B0018B60A /* HelperOBJC */ = {
+			isa = PBXGroup;
+			children = (
+				7023488A26A5863C0018B60A /* NeshanNav-Bridging-Header.h */,
+				7023488B26A5863C0018B60A /* NeshanHelper.m */,
+				7023488E26A586610018B60A /* NeshanHelper.h */,
+			);
+			path = HelperOBJC;
+			sourceTree = "<group>";
+		};
+		A6087BAFC6B4B9EC4100C842 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				193DC77630801FA0314E35BA /* Pods-NeshanNav.debug.xcconfig */,
+				A3EC6B53FCABAD45F9A4B5FB /* Pods-NeshanNav.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B6ED80A09D8C90772830C42B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2F371B7A1DE9F42754E5F5C /* Pods_NeshanNav.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +114,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7023488726A586220018B60A /* Build configuration list for PBXNativeTarget "NeshanNav" */;
 			buildPhases = (
+				6D36F8375F749F0FF33E3417 /* [CP] Check Pods Manifest.lock */,
 				7023486F26A586200018B60A /* Sources */,
 				7023487026A586200018B60A /* Frameworks */,
 				7023487126A586200018B60A /* Resources */,
@@ -98,6 +139,7 @@
 				TargetAttributes = {
 					7023487226A586200018B60A = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -132,6 +174,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6D36F8375F749F0FF33E3417 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NeshanNav-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7023486F26A586200018B60A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +206,7 @@
 			files = (
 				7023487B26A586200018B60A /* ViewController.swift in Sources */,
 				7023487726A586200018B60A /* AppDelegate.swift in Sources */,
+				7023488C26A5863C0018B60A /* NeshanHelper.m in Sources */,
 				7023487926A586200018B60A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,9 +351,11 @@
 		};
 		7023488826A586220018B60A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 193DC77630801FA0314E35BA /* Pods-NeshanNav.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NeshanNav/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -294,6 +364,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hooradramezani.NeshanNav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NeshanNav/HelperOBJC/NeshanNav-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,9 +373,11 @@
 		};
 		7023488926A586220018B60A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3EC6B53FCABAD45F9A4B5FB /* Pods-NeshanNav.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NeshanNav/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -312,6 +386,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hooradramezani.NeshanNav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NeshanNav/HelperOBJC/NeshanNav-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
