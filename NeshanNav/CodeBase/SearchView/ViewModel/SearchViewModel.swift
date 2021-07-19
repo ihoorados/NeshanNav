@@ -46,7 +46,7 @@ class SearchViewModel{
             switch result {
                 case .success(let searchResult):
                     self?.listItem = searchResult.items
-                    self?.searchDelegate?.updateSearchList(items: searchResult.items)
+                    self?.searchDelegate?.loadSearchList(items: searchResult.items)
                 case .failure(_):
                     self?.retryRequest = {
                         self?.requestForSearchingLocation(term: term)
@@ -54,6 +54,5 @@ class SearchViewModel{
             }
         }
     }
-    
     
 }

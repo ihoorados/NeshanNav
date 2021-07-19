@@ -48,6 +48,9 @@ class MapViewViewModel{
                 case .success(let data):
                     self?.billboardDelegate?.isLoading(loading: false)
                     self?.billboardDelegate?.updateViewDataModel(with: data)
+                    self?.billboardRouter?.CTATapped = { [weak self] in
+                        self?.startFindingRoute()
+                    }
                 case.failure(_):
                     self?.billboardDelegate?.updateViewDataWithError(retry: {
                         self?.requestForLocationInfo(with: location)
@@ -84,6 +87,9 @@ class MapViewViewModel{
                         return
                     }
                     self?.billboardDelegate?.updateViewDataModel(with: element)
+                    self?.billboardRouter?.CTATapped = { [weak self]  in
+                        self?.startNavigateOnRoutes()
+                    }
                 case .failure(_):
                     self?.billboardDelegate?.updateViewDataWithError(retry: {
                         self?.requestForDistance(from: from,to: to)

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SearchViewCollectionViewDelegate: NSObject,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class SearchCollectionViewDelegate: NSObject,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     typealias CellConfigurator = (IndexPath) -> Void
     var delegate: CellConfigurator

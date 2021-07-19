@@ -16,8 +16,8 @@ class SearchView: UIViewController {
      */
     //var viewModel : BillboardViewModelDelegate
     
-    var ListDataSource: SearchViewCollectionViewDataSource?
-    var ListDelegate: SearchViewCollectionViewDelegate?
+    var ListDataSource: SearchCollectionViewDataSource?
+    var ListDelegate: SearchCollectionViewDelegate?
 
     var viewModel: SearchViewModel = SearchViewModel()
     init(delegate: SearchUseCases) {
@@ -125,11 +125,12 @@ class SearchView: UIViewController {
     // MARK: Setup UIView
     private func setupUIView(){
         // Mark: - Add Container View
-        self.view.addSubview(ContainerView)
         self.view.addSubview(searchTextFeild)
         self.view.addSubview(liveUserLocationButton)
-        self.ContainerView.addSubview(searchListCollectionView)
         self.view.addSubview(activityIndactor)
+
+        self.view.addSubview(ContainerView)
+        self.ContainerView.addSubview(searchListCollectionView)
         print("✅ SearchView : setup UIView Completed.")
     }
     
@@ -188,11 +189,8 @@ class SearchView: UIViewController {
     // MARK: setup Collection View
     fileprivate func setupCollectionView(){
         // Register Search List Cell Custom Class using cell identifire
-        searchListCollectionView.register(SearchListCollectionViewCell.self, forCellWithReuseIdentifier: ListCellIdentifire)
+        searchListCollectionView.register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: ListCellIdentifire)
         print("🔹 SearchView : collection view registered.")
-        //searchListCollectionView.delegate = self
-        //searchListCollectionView.dataSource = self
-        print("🔹 SearchView : collection view delegate and dataSource set.")
     }
 
 }

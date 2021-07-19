@@ -7,9 +7,9 @@
 
 import Foundation
 
-class SearchViewCollectionViewDataSource: NSObject,UICollectionViewDataSource{
+class SearchCollectionViewDataSource: NSObject,UICollectionViewDataSource{
     
-    typealias CellConfigurator = (SearchItem, SearchListCollectionViewCell) -> Void
+    typealias CellConfigurator = (SearchItem, SearchCollectionViewCell) -> Void
 
     var models : [SearchItem]
     private let reuseIdentifier: String
@@ -29,7 +29,7 @@ class SearchViewCollectionViewDataSource: NSObject,UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
-                                                                for: indexPath) as! SearchListCollectionViewCell
+                                                                for: indexPath) as! SearchCollectionViewCell
         let model = models[indexPath.row]
         cellConfigurator(model, cell)
         return cell

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SearchListCollectionViewCell: UICollectionViewCell {
+class SearchCollectionViewCell: UICollectionViewCell {
     
     private var ContainerView: UIView = {
         let view = UIView()
