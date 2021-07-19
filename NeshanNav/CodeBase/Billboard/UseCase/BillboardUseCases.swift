@@ -9,7 +9,8 @@ import Foundation
 
 protocol BilboardUseCases: AnyObject {
     func closeBillboard()
-    func startNavigateOnMap()
-    func findDirectionRoutes()
-    func billboardHeightChangetTo(height: CGFloat)
+//    func startNavigateOnMap()
+//    func findDirectionRoutes()
+    func billboardChangetTo(height: CGFloat)
+    var CTATapped: (() -> Void)? { get set }
 }

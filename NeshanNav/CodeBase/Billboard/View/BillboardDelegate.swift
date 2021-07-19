@@ -21,7 +21,7 @@ extension BillboardView: BillboardDelegate{
         DispatchQueue.main.async {
             if loading{
                 self.spinner.startAnimating()
-                self.delegate?.billboardHeightChangetTo(height: 90.0)
+                self.delegate?.billboardChangetTo(height: 90.0)
                 self.titleLabel.text = "در حال بررسی ..."
                 self.routeNameStackView.alpha = 0
                 self.routeAddressStackView.alpha = 0
@@ -47,7 +47,7 @@ extension BillboardView: BillboardDelegate{
             self.routeNameIcon.tintColor = .white
             
             self.ConfigButtonToRoute()
-            self.delegate?.billboardHeightChangetTo(height: 250)
+            self.delegate?.billboardChangetTo(height: 250)
         }
     }
     
@@ -59,7 +59,7 @@ extension BillboardView: BillboardDelegate{
             self.routeNameStackView.alpha = 1
             self.routeAddressStackView.alpha = 1
             self.ConfigButtonToNavigate()
-            self.delegate?.billboardHeightChangetTo(height: 250)
+            self.delegate?.billboardChangetTo(height: 250)
         }
     }
     
@@ -67,7 +67,7 @@ extension BillboardView: BillboardDelegate{
         // Update Route Info Here
         DispatchQueue.main.async {
             self.HiddenCTAButton()
-            self.delegate?.billboardHeightChangetTo(height: 190)
+            self.delegate?.billboardChangetTo(height: 190)
         }
     }
     
@@ -81,7 +81,7 @@ extension BillboardView: BillboardDelegate{
             self.routeNameStackView.alpha = 0
             self.routeAddressStackView.alpha = 0
             self.ConfigButtonToFaild()
-            self.delegate?.billboardHeightChangetTo(height: 250)
+            self.delegate?.billboardChangetTo(height: 250)
         }
     }
 }

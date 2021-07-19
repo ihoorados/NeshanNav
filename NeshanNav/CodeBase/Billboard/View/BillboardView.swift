@@ -192,16 +192,7 @@ class BillboardView: UIViewController {
     }
     
     @objc func CTAButtonTapped(sender: UIButton){
-        switch sender.tag {
-        case 0:
-            delegate?.findDirectionRoutes()
-        case 1:
-            delegate?.startNavigateOnMap()
-        case 2:
-            retryRequest?()
-        default:
-            print("Wrong Selection")
-        }
+        delegate?.CTATapped?()
     }
     
     func ConfigButtonToNavigate(){

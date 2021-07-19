@@ -10,6 +10,8 @@ import Foundation
 
 final class BillboardRouter: BilboardUseCases{
     
+    var CTATapped: (() -> ())?
+    
     // MARK: UI Element
     weak var billboardView: UIView?
     weak var view: UIView?
@@ -19,21 +21,22 @@ final class BillboardRouter: BilboardUseCases{
         self.viewModel = viewModel
     }
     
-    func startNavigateOnMap() {
-        viewModel?.startNavigateOnRoutes()
-    }
-    
+//    func startNavigateOnMap() {
+//        viewModel?.startNavigateOnRoutes()
+//    }
+//    
     func closeBillboard() {
         viewModel?.cleanMapViewLayer()
-        billboardHeightChangetTo(height: 0.0)
+        billboardChangetTo(height: 0.0)
     }
+//    
+//    func findDirectionRoutes() {
+//        viewModel?.startFindingRoute()
+//    }
     
-    func findDirectionRoutes() {
-        viewModel?.startFindingRoute()
-    }
-    
-    func billboardHeightChangetTo(height: CGFloat) {
+    func billboardChangetTo(height: CGFloat) {
         guard let view = view else{
+            print("🔴 BillboardRouter: view not set.")
             return
         }
         DispatchQueue.main.async {
@@ -42,6 +45,8 @@ final class BillboardRouter: BilboardUseCases{
             })
         }
     }
+    
+    
     
     deinit {
         print("🗑 BillboardRouter: deinit frome memory.")
