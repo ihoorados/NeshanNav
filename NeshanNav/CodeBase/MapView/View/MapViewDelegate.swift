@@ -21,31 +21,38 @@ extension MapView: MapViewDelegate{
 
     // MARK: Route Camera To Location
     func cameraRouteToLocation(loc: NTLngLat) {
-        self.mapView.setFocalPointPosition(NTLngLat(x: loc.getX(),y: loc.getY()),
-                                      durationSeconds: 0.2)
+        DispatchQueue.main.async {
+            self.mapView.setFocalPointPosition(loc, durationSeconds: 0.3)
+        }
     }
 
     // MARK: Add Route shape To MapView
     func addRouteShape(locs: [NTLngLat]) {
+        
         // Clear Previous route Shape Layer
         routeShapeLayer.clear()
+        
         // Create Vector For Lat & Long
         let lngLatVector = NTLngLatVector()
-        
         for loc in locs{
-            lngLatVector?.add(NTLngLat(x: loc.getX(), y: loc.getY()))
+            lngLatVector?.add(loc)
         }
+        
         // Create line
         let lineGeom = NTLineGeom(poses: lngLatVector)
         let line = NTLine(geometry: lineGeom, style: getLineStyle())
-        routeShapeLayer.add(line)
         
         // Move Camera To route bound
         DispatchQueue.main.async {
+            
+            // Add All Line in NTVectorElementLayer
+            self.routeShapeLayer.add(line)
+            
+            //
             let scale: CGFloat = UIScreen.main.scale
             let viewportBounds = NTViewportBounds(min: NTViewportPosition(x: 0, y: 0), max: NTViewportPosition(x: Float(self.mapView.frame.size.width * scale), y: Float((self.mapView.frame.size.height - self.billboardContainerView.frame.height) * scale)))
             let bounds = line?.getBounds()
-            self.mapView.move(toCameraBounds: bounds, viewportBounds: viewportBounds, integerZoom: true, durationSeconds: 0.5)
+            self.mapView.move(toCameraBounds: bounds, viewportBounds: viewportBounds, integerZoom: true, durationSeconds: 0.9)
         }
         print("🟢 MapViewDelegate: Route Shape Add To MapView")
     }

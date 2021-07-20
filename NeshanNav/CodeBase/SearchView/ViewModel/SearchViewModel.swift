@@ -40,9 +40,7 @@ class SearchViewModel{
         let longitude = userLocation.getX()
         let location = Location(latitude: latitude, longitude: longitude)
         
-        searchDelegate?.isLoading(isLoading: true)
         searchRepo.getLocationsOverNetwork(at: location, term: term) { [weak self] result in
-            self?.searchDelegate?.isLoading(isLoading: false)
             switch result {
                 case .success(let searchResult):
                     self?.listItem = searchResult.items

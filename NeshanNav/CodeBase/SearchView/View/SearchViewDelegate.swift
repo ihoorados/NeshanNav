@@ -49,7 +49,7 @@ extension SearchView: SearchDelegate{
     
 
     func loadSearchList(items:[SearchItem]){
-
+        isLoading(isLoading: false)
         let dataSource = SearchCollectionViewDataSource(models: items,
                                               reuseIdentifier: ListCellIdentifire,
                                               cellConfigurator: { viewModel, cell in

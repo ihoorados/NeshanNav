@@ -57,7 +57,6 @@
 		704D27B626A58E81001D3E24 /* IRANYekanMobileThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 704D27AE26A58E81001D3E24 /* IRANYekanMobileThin.ttf */; };
 		704D27B726A58E81001D3E24 /* IRANYekanMobileMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 704D27AF26A58E81001D3E24 /* IRANYekanMobileMedium.ttf */; };
 		704D27B926A58E92001D3E24 /* neshan.license in Resources */ = {isa = PBXBuildFile; fileRef = 704D27B826A58E92001D3E24 /* neshan.license */; };
-		704D27C426A5D0E5001D3E24 /* LocationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D27C326A5D0E5001D3E24 /* LocationInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,7 +114,6 @@
 		704D27AE26A58E81001D3E24 /* IRANYekanMobileThin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileThin.ttf; sourceTree = "<group>"; };
 		704D27AF26A58E81001D3E24 /* IRANYekanMobileMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileMedium.ttf; sourceTree = "<group>"; };
 		704D27B826A58E92001D3E24 /* neshan.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neshan.license; sourceTree = "<group>"; };
-		704D27C326A5D0E5001D3E24 /* LocationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfo.swift; sourceTree = "<group>"; };
 		A3EC6B53FCABAD45F9A4B5FB /* Pods-NeshanNav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeshanNav.release.xcconfig"; path = "Target Support Files/Pods-NeshanNav/Pods-NeshanNav.release.xcconfig"; sourceTree = "<group>"; };
 		F2F371B7A1DE9F42754E5F5C /* Pods_NeshanNav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeshanNav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -156,7 +154,7 @@
 				704D27B826A58E92001D3E24 /* neshan.license */,
 				704D27A726A58E71001D3E24 /* Font */,
 				7023489026A588360018B60A /* CodeBase */,
-				7023488F26A5882E0018B60A /* App */,
+				7023488F26A5882E0018B60A /* App Delegate */,
 				7023488D26A5864B0018B60A /* HelperOBJC */,
 				7023487C26A586200018B60A /* Main.storyboard */,
 				7023487F26A586220018B60A /* Assets.xcassets */,
@@ -176,19 +174,18 @@
 			path = HelperOBJC;
 			sourceTree = "<group>";
 		};
-		7023488F26A5882E0018B60A /* App */ = {
+		7023488F26A5882E0018B60A /* App Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				7023487826A586200018B60A /* SceneDelegate.swift */,
 				7023487626A586200018B60A /* AppDelegate.swift */,
 			);
-			path = App;
+			path = "App Delegate";
 			sourceTree = "<group>";
 		};
 		7023489026A588360018B60A /* CodeBase */ = {
 			isa = PBXGroup;
 			children = (
-				704D27C226A5D0B6001D3E24 /* Shared UI */,
 				704D274926A589E2001D3E24 /* Coordinator */,
 				704D274C26A58A04001D3E24 /* MapView */,
 				704D276A26A58BA8001D3E24 /* Billboard */,
@@ -402,14 +399,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		704D27C226A5D0B6001D3E24 /* Shared UI */ = {
-			isa = PBXGroup;
-			children = (
-				704D27C326A5D0E5001D3E24 /* LocationInfo.swift */,
-			);
-			path = "Shared UI";
-			sourceTree = "<group>";
-		};
 		A6087BAFC6B4B9EC4100C842 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,7 +532,6 @@
 				7023487726A586200018B60A /* AppDelegate.swift in Sources */,
 				704D275626A58A8D001D3E24 /* MapViewModelDelegate.swift in Sources */,
 				704D278B26A58CE3001D3E24 /* MapRoutesRepository.swift in Sources */,
-				704D27C426A5D0E5001D3E24 /* LocationInfo.swift in Sources */,
 				704D279626A58D4C001D3E24 /* URLRequestLog.swift in Sources */,
 				704D279A26A58D69001D3E24 /* EndPoint.swift in Sources */,
 				704D277726A58C2D001D3E24 /* SearchRouter.swift in Sources */,

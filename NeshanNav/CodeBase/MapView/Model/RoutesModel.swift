@@ -44,9 +44,7 @@ struct OverviewPolyline: Codable {
     let points: String
 }
 
-
-// ---------------------
-// ---------------------
+/* --------------------------------------------------------------- */
 
 // MARK: - RouteModel
 struct RouteModel:Codable {
@@ -64,8 +62,7 @@ let MockRouteInformationModel = RouteModel(status: "Ok", neighbourhood: "تهر�
                                            route_type: "تهران",
                                            formatted_address: "6")
 
-// ---------------------
-// ---------------------
+/* --------------------------------------------------------------- */
 
 // MARK: - SnappedPoint
 struct SnappedPoint {
@@ -79,9 +76,9 @@ struct Location {
 }
 
 
-// Mock Model For This Request
-// https://api.neshan.org/v1/map-matching?path=36.552884,53.076659%7c36.556222,53.078948
-// Start Point : 36.552884,53.076659
-// End Point   : 36.556222,53.078948
+/* Mock Model For This Request
+   URL : https://api.neshan.org/v1/map-matching?path=36.552884,53.076659%7c36.556222,53.078948
+   Start Point : 36.552884,53.076659
+   End Point   : 36.556222,53.078948 */
 let mockSnappedPoint = [SnappedPoint(location: Location(latitude: 36.552874, longitude: 53.076616), originalIndex: 0),
                         SnappedPoint(location: Location(latitude: 36.556211, longitude: 53.078939), originalIndex: 1)]
