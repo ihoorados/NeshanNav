@@ -16,4 +16,4 @@ Dependencies in this project are provided via Cocoapods. Please install all depe
 
 pod install
 
-![Test Image 1](Simulator Screen Shot3.png)
+![Test Image 1](NeshanNavScreens.png)
