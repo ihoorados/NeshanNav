@@ -12,8 +12,8 @@ Application main activity contain a map. The application starts to find your loc
 
 Installation
 
+Neshan SDK
+
 Dependencies in this project are provided via Cocoapods. Please install all dependecies with
 
 pod install
-
-![Test Image 1](NeshanNavScreens.png)
