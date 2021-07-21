@@ -28,7 +28,7 @@
 		704D277526A58C24001D3E24 /* SearchUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277426A58C24001D3E24 /* SearchUseCases.swift */; };
 		704D277726A58C2D001D3E24 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277626A58C2D001D3E24 /* SearchRouter.swift */; };
 		704D277926A58C3B001D3E24 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277826A58C3B001D3E24 /* SearchModel.swift */; };
-		704D277B26A58C50001D3E24 /* SearchViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277A26A58C50001D3E24 /* SearchViewModelImp.swift */; };
+		704D277B26A58C50001D3E24 /* SearchViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277A26A58C50001D3E24 /* SearchViewModelImpl.swift */; };
 		704D277D26A58C5E001D3E24 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277C26A58C5E001D3E24 /* SearchView.swift */; };
 		704D277F26A58C76001D3E24 /* SearchViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277E26A58C76001D3E24 /* SearchViewDelegate.swift */; };
 		704D278126A58C84001D3E24 /* SearchViewTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D278026A58C84001D3E24 /* SearchViewTextFieldDelegate.swift */; };
@@ -58,6 +58,7 @@
 		704D27B726A58E81001D3E24 /* IRANYekanMobileMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 704D27AF26A58E81001D3E24 /* IRANYekanMobileMedium.ttf */; };
 		704D27B926A58E92001D3E24 /* neshan.license in Resources */ = {isa = PBXBuildFile; fileRef = 704D27B826A58E92001D3E24 /* neshan.license */; };
 		70796EF226A80EE50095361C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70796EF126A80EE50095361C /* SearchViewModel.swift */; };
+		70796EF426A8B3AF0095361C /* QuickAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70796EF326A8B3AF0095361C /* QuickAddressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,7 +87,7 @@
 		704D277426A58C24001D3E24 /* SearchUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCases.swift; sourceTree = "<group>"; };
 		704D277626A58C2D001D3E24 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		704D277826A58C3B001D3E24 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
-		704D277A26A58C50001D3E24 /* SearchViewModelImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelImp.swift; sourceTree = "<group>"; };
+		704D277A26A58C50001D3E24 /* SearchViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelImpl.swift; sourceTree = "<group>"; };
 		704D277C26A58C5E001D3E24 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		704D277E26A58C76001D3E24 /* SearchViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewDelegate.swift; sourceTree = "<group>"; };
 		704D278026A58C84001D3E24 /* SearchViewTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewTextFieldDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 		704D27AF26A58E81001D3E24 /* IRANYekanMobileMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileMedium.ttf; sourceTree = "<group>"; };
 		704D27B826A58E92001D3E24 /* neshan.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neshan.license; sourceTree = "<group>"; };
 		70796EF126A80EE50095361C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		70796EF326A8B3AF0095361C /* QuickAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAddressView.swift; sourceTree = "<group>"; };
 		A3EC6B53FCABAD45F9A4B5FB /* Pods-NeshanNav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeshanNav.release.xcconfig"; path = "Target Support Files/Pods-NeshanNav/Pods-NeshanNav.release.xcconfig"; sourceTree = "<group>"; };
 		F2F371B7A1DE9F42754E5F5C /* Pods_NeshanNav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeshanNav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -197,6 +199,7 @@
 				704D279226A58D20001D3E24 /* NetworkLayer */,
 				704D279B26A58D72001D3E24 /* LocationManager */,
 				704D279E26A58D8F001D3E24 /* Utils */,
+				70796EF326A8B3AF0095361C /* QuickAddressView.swift */,
 			);
 			path = CodeBase;
 			sourceTree = "<group>";
@@ -389,7 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				70796EF126A80EE50095361C /* SearchViewModel.swift */,
-				704D277A26A58C50001D3E24 /* SearchViewModelImp.swift */,
+				704D277A26A58C50001D3E24 /* SearchViewModelImpl.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				704D278426A58CA3001D3E24 /* SearchCollectionViewDataSource.swift in Sources */,
 				704D274B26A589F5001D3E24 /* AppCoordinator.swift in Sources */,
 				704D277D26A58C5E001D3E24 /* SearchView.swift in Sources */,
+				70796EF426A8B3AF0095361C /* QuickAddressView.swift in Sources */,
 				70796EF226A80EE50095361C /* SearchViewModel.swift in Sources */,
 				704D276C26A58BC0001D3E24 /* BillboardUseCases.swift in Sources */,
 				704D27A026A58DA5001D3E24 /* UILayout.swift in Sources */,
@@ -545,7 +549,7 @@
 				704D277F26A58C76001D3E24 /* SearchViewDelegate.swift in Sources */,
 				704D279D26A58D88001D3E24 /* LocationManagerImpl.swift in Sources */,
 				704D278826A58CC3001D3E24 /* SearchCollectionViewCell.swift in Sources */,
-				704D277B26A58C50001D3E24 /* SearchViewModelImp.swift in Sources */,
+				704D277B26A58C50001D3E24 /* SearchViewModelImpl.swift in Sources */,
 				704D278626A58CB2001D3E24 /* SearchCollectionViewDelegate.swift in Sources */,
 				704D276E26A58BD8001D3E24 /* BillboardRouter.swift in Sources */,
 				7023488C26A5863C0018B60A /* NeshanHelper.m in Sources */,

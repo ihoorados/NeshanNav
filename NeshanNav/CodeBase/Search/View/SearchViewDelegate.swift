@@ -40,6 +40,7 @@ extension SearchView: SearchViewDelegate{
     func closeSearchView(){
         searchTextFeild.resignFirstResponder()
         searchTextFeild.text = ""
+        loadSearchList(items: [])
 
         viewModel.delegate?.searchViewHeightChangetTo(height: 100.0)
         

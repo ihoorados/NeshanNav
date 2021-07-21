@@ -19,7 +19,7 @@ class SearchView: UIViewController {
     var ListDataSource: SearchCollectionViewDataSource?
     var ListDelegate: SearchCollectionViewDelegate?
 
-    var viewModel: SearchViewModel = SearchViewModelImp()
+    var viewModel: SearchViewModel = SearchViewModelImpl()
     init(delegate: SearchUseCases) {
         super.init(nibName: nil, bundle: nil)
         viewModel.searchViewDelegate = self
@@ -115,15 +115,6 @@ class SearchView: UIViewController {
         return ai
     }()
     
-    var quickAddressStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis          = NSLayoutConstraint.Axis.horizontal
-        stackView.distribution  = UIStackView.Distribution.fill
-        stackView.alignment     = UIStackView.Alignment.center
-        stackView.spacing       = 12
-        return stackView
-    }()
-    
     // MARK: - initials Setup For Practice VC
     func initUISetup(){
         setupUIView()
@@ -141,7 +132,6 @@ class SearchView: UIViewController {
 
         view.addSubview(ContainerView)
         ContainerView.addSubview(searchListCollectionView)
-        ContainerView.addSubview(quickAddressStackView)
         view.addSubview(activityIndactor)
 
         print("✅ SearchView : setup UIView Completed.")
@@ -176,7 +166,7 @@ class SearchView: UIViewController {
                                       paddingTop: 24.0,
                                       paddingLeft: 0.0,
                                       paddingRight: 0.0,
-                                      cornerRadius: 0.0)
+                                      cornerRadius: 12.0)
         
         activityIndactor.center = view.center
         print("✅ SearchView : setup UILayouts Completed.")

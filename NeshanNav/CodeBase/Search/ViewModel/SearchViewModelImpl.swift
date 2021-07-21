@@ -8,7 +8,7 @@
 import Foundation
 
 
-class SearchViewModelImp : SearchViewModel{
+class SearchViewModelImpl : SearchViewModel{
     
     var listItem : [SearchItem] = []
     var retryRequest: (() -> ())?

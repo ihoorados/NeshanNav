@@ -18,6 +18,10 @@ extension SearchView: UITextFieldDelegate{
         guard let text = textField.text else {
             return
         }
+        if text == ""{
+            loadSearchList(items: [])
+            return
+        }
         isLoading(true)
         viewModel.requestForSearchingLocation(term: text)
     }
