@@ -15,6 +15,6 @@ Installation
 Dependencies in this project are provided via Cocoapods. Please install all dependecies with
 
 pod install
-![Screenshot](![Uploading image.png…]())
-![Screenshot](![Uploading image.png…]())
-![Screenshot](![Uploading image.png…]())
+![Screenshot](Simulator Screen2.png)
+![Screenshot](Simulator Screen Shot3.png)
+![Screenshot](Simulator Screen1png.png)
