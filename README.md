@@ -19,3 +19,6 @@ pod install
 ![](Simulator Screen2.png)
 ![](Simulator Screen Shot3.png)
 ![](Simulator Screen1png.png)
+
+
+![image](Simulator Screen2.png "Title" {width=40px height=400px})
