@@ -16,7 +16,7 @@ class SearchViewModelImp : SearchViewModel{
     weak var delegate: SearchUseCases?
     weak var searchViewDelegate: SearchViewDelegate?
 
-    private let searchRepo:SearchLocationRepository
+    let searchRepo:SearchLocationRepository
     
     init(searchRepo:SearchLocationRepository = SearchLocationRepositoryImp()) {
         self.searchRepo = searchRepo

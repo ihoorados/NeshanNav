@@ -14,4 +14,5 @@ protocol SearchViewModel {
     var retryRequest: (() -> ())? { get set }
     var delegate: SearchUseCases? { get set }
     var searchViewDelegate: SearchViewDelegate? { get set }
+    var searchRepo: SearchLocationRepository { get }
 }

@@ -46,7 +46,7 @@ class SearchView: UIViewController {
     
     lazy var ContainerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .white
         return view
     }()
 
@@ -179,7 +179,6 @@ class SearchView: UIViewController {
                                       cornerRadius: 0.0)
         
         activityIndactor.center = view.center
-        view.layoutIfNeeded()
         print("✅ SearchView : setup UILayouts Completed.")
     }
     

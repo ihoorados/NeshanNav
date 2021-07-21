@@ -30,10 +30,11 @@ extension SearchView: SearchViewDelegate{
         
         viewModel.delegate?.searchViewHeightChangetTo(height: view.frame.height - 50.0)
         
-        let image = UIImage(systemName: "xmark.square.fill")?.withRenderingMode(.alwaysTemplate)
+        let image = UIImage(systemName: "x.square.fill")?.withRenderingMode(.alwaysTemplate)
         liveUserLocationButton.setBackgroundImage(image, for: .normal)
         liveUserLocationButton.tintColor = UIColor.systemRed
         liveUserLocationButton.tag = 1
+
     }
     
     func closeSearchView(){
