@@ -31,14 +31,20 @@ After cloning project from Github, open terminal and navigate in project folder.
 
 
 ```bash
-cd /your_loca_path/NeshanNav
-```
 > cd /your_loca_path/NeshanNav
+```
 
 next, install all pods with command.
 
+
+```bash
 > pod install
+```
 
 When all pods are installed, open project folder by digit on terminal
 
-> open .
+
+```bash
+> open 
+```
+
