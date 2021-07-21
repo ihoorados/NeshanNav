@@ -10,4 +10,4 @@ This is a clean iOS project structured as follow:
 
 Application main activity contain a map. The application starts to find your location. Then it shows your accurate location on the map. Users must be able to choose a location as a destination on the map. The application then gets a route from the user’s current location to the destination and displays the route shape on the map. After getting the route, the user can start navigation.
 
-![Alt text](NeshanNavScreens.png?raw=true "NeshanNavScreens")
+![Screenshot](NeshanNavScreens.png)
