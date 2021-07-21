@@ -19,10 +19,10 @@ class SearchView: UIViewController {
     var ListDataSource: SearchCollectionViewDataSource?
     var ListDelegate: SearchCollectionViewDelegate?
 
-    var viewModel: SearchViewModel = SearchViewModel()
+    var viewModel: SearchViewModel = SearchViewModelImp()
     init(delegate: SearchUseCases) {
         super.init(nibName: nil, bundle: nil)
-        viewModel.searchDelegate = self
+        viewModel.searchViewDelegate = self
         viewModel.delegate = delegate
     }
     
@@ -46,7 +46,7 @@ class SearchView: UIViewController {
     
     lazy var ContainerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = .lightGray
         return view
     }()
 

@@ -12,8 +12,8 @@ final class SearchRouter: SearchUseCases{
     weak var searchView: UIView?
     weak var view: UIView?
     
-    private let viewModel: mapViewModelDelegate
-    init(viewModel:mapViewModelDelegate) {
+    private let viewModel: MapViewViewModel
+    init(viewModel:MapViewViewModel) {
         self.viewModel = viewModel
     }
     

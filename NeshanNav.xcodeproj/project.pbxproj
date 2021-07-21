@@ -18,17 +18,17 @@
 		704D274F26A58A24001D3E24 /* RoutesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D274E26A58A24001D3E24 /* RoutesModel.swift */; };
 		704D275126A58A57001D3E24 /* DistanceMatrixModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D275026A58A57001D3E24 /* DistanceMatrixModel.swift */; };
 		704D275426A58A7D001D3E24 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D275326A58A7D001D3E24 /* MapViewModel.swift */; };
-		704D275626A58A8D001D3E24 /* MapViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D275526A58A8D001D3E24 /* MapViewModelDelegate.swift */; };
+		704D275626A58A8D001D3E24 /* MapViewViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D275526A58A8D001D3E24 /* MapViewViewModelImp.swift */; };
 		704D275926A58AA5001D3E24 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D275826A58AA5001D3E24 /* MapView.swift */; };
 		704D275B26A58AC0001D3E24 /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D275A26A58AC0001D3E24 /* MapViewDelegate.swift */; };
 		704D276C26A58BC0001D3E24 /* BillboardUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D276B26A58BC0001D3E24 /* BillboardUseCases.swift */; };
 		704D276E26A58BD8001D3E24 /* BillboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D276D26A58BD8001D3E24 /* BillboardRouter.swift */; };
 		704D277026A58BE6001D3E24 /* BillboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D276F26A58BE6001D3E24 /* BillboardView.swift */; };
-		704D277226A58BF0001D3E24 /* BillboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277126A58BF0001D3E24 /* BillboardDelegate.swift */; };
+		704D277226A58BF0001D3E24 /* BillboardViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277126A58BF0001D3E24 /* BillboardViewDelegate.swift */; };
 		704D277526A58C24001D3E24 /* SearchUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277426A58C24001D3E24 /* SearchUseCases.swift */; };
 		704D277726A58C2D001D3E24 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277626A58C2D001D3E24 /* SearchRouter.swift */; };
 		704D277926A58C3B001D3E24 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277826A58C3B001D3E24 /* SearchModel.swift */; };
-		704D277B26A58C50001D3E24 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277A26A58C50001D3E24 /* SearchViewModel.swift */; };
+		704D277B26A58C50001D3E24 /* SearchViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277A26A58C50001D3E24 /* SearchViewModelImp.swift */; };
 		704D277D26A58C5E001D3E24 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277C26A58C5E001D3E24 /* SearchView.swift */; };
 		704D277F26A58C76001D3E24 /* SearchViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D277E26A58C76001D3E24 /* SearchViewDelegate.swift */; };
 		704D278126A58C84001D3E24 /* SearchViewTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D278026A58C84001D3E24 /* SearchViewTextFieldDelegate.swift */; };
@@ -57,6 +57,7 @@
 		704D27B626A58E81001D3E24 /* IRANYekanMobileThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 704D27AE26A58E81001D3E24 /* IRANYekanMobileThin.ttf */; };
 		704D27B726A58E81001D3E24 /* IRANYekanMobileMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 704D27AF26A58E81001D3E24 /* IRANYekanMobileMedium.ttf */; };
 		704D27B926A58E92001D3E24 /* neshan.license in Resources */ = {isa = PBXBuildFile; fileRef = 704D27B826A58E92001D3E24 /* neshan.license */; };
+		70796EF226A80EE50095361C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70796EF126A80EE50095361C /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,17 +76,17 @@
 		704D274E26A58A24001D3E24 /* RoutesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesModel.swift; sourceTree = "<group>"; };
 		704D275026A58A57001D3E24 /* DistanceMatrixModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceMatrixModel.swift; sourceTree = "<group>"; };
 		704D275326A58A7D001D3E24 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
-		704D275526A58A8D001D3E24 /* MapViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelDelegate.swift; sourceTree = "<group>"; };
+		704D275526A58A8D001D3E24 /* MapViewViewModelImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewViewModelImp.swift; sourceTree = "<group>"; };
 		704D275826A58AA5001D3E24 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		704D275A26A58AC0001D3E24 /* MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewDelegate.swift; sourceTree = "<group>"; };
 		704D276B26A58BC0001D3E24 /* BillboardUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillboardUseCases.swift; sourceTree = "<group>"; };
 		704D276D26A58BD8001D3E24 /* BillboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillboardRouter.swift; sourceTree = "<group>"; };
 		704D276F26A58BE6001D3E24 /* BillboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillboardView.swift; sourceTree = "<group>"; };
-		704D277126A58BF0001D3E24 /* BillboardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillboardDelegate.swift; sourceTree = "<group>"; };
+		704D277126A58BF0001D3E24 /* BillboardViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillboardViewDelegate.swift; sourceTree = "<group>"; };
 		704D277426A58C24001D3E24 /* SearchUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCases.swift; sourceTree = "<group>"; };
 		704D277626A58C2D001D3E24 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		704D277826A58C3B001D3E24 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
-		704D277A26A58C50001D3E24 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		704D277A26A58C50001D3E24 /* SearchViewModelImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelImp.swift; sourceTree = "<group>"; };
 		704D277C26A58C5E001D3E24 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		704D277E26A58C76001D3E24 /* SearchViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewDelegate.swift; sourceTree = "<group>"; };
 		704D278026A58C84001D3E24 /* SearchViewTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewTextFieldDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		704D27AE26A58E81001D3E24 /* IRANYekanMobileThin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileThin.ttf; sourceTree = "<group>"; };
 		704D27AF26A58E81001D3E24 /* IRANYekanMobileMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileMedium.ttf; sourceTree = "<group>"; };
 		704D27B826A58E92001D3E24 /* neshan.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neshan.license; sourceTree = "<group>"; };
+		70796EF126A80EE50095361C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		A3EC6B53FCABAD45F9A4B5FB /* Pods-NeshanNav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeshanNav.release.xcconfig"; path = "Target Support Files/Pods-NeshanNav/Pods-NeshanNav.release.xcconfig"; sourceTree = "<group>"; };
 		F2F371B7A1DE9F42754E5F5C /* Pods_NeshanNav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeshanNav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -230,7 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				704D275326A58A7D001D3E24 /* MapViewModel.swift */,
-				704D275526A58A8D001D3E24 /* MapViewModelDelegate.swift */,
+				704D275526A58A8D001D3E24 /* MapViewViewModelImp.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -352,7 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				704D276F26A58BE6001D3E24 /* BillboardView.swift */,
-				704D277126A58BF0001D3E24 /* BillboardDelegate.swift */,
+				704D277126A58BF0001D3E24 /* BillboardViewDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,7 +388,8 @@
 		704D27C026A590AB001D3E24 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				704D277A26A58C50001D3E24 /* SearchViewModel.swift */,
+				70796EF126A80EE50095361C /* SearchViewModel.swift */,
+				704D277A26A58C50001D3E24 /* SearchViewModelImp.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -526,11 +529,12 @@
 				704D278426A58CA3001D3E24 /* SearchCollectionViewDataSource.swift in Sources */,
 				704D274B26A589F5001D3E24 /* AppCoordinator.swift in Sources */,
 				704D277D26A58C5E001D3E24 /* SearchView.swift in Sources */,
+				70796EF226A80EE50095361C /* SearchViewModel.swift in Sources */,
 				704D276C26A58BC0001D3E24 /* BillboardUseCases.swift in Sources */,
 				704D27A026A58DA5001D3E24 /* UILayout.swift in Sources */,
 				704D279826A58D5A001D3E24 /* NetworkError.swift in Sources */,
 				7023487726A586200018B60A /* AppDelegate.swift in Sources */,
-				704D275626A58A8D001D3E24 /* MapViewModelDelegate.swift in Sources */,
+				704D275626A58A8D001D3E24 /* MapViewViewModelImp.swift in Sources */,
 				704D278B26A58CE3001D3E24 /* MapRoutesRepository.swift in Sources */,
 				704D279626A58D4C001D3E24 /* URLRequestLog.swift in Sources */,
 				704D279A26A58D69001D3E24 /* EndPoint.swift in Sources */,
@@ -541,7 +545,7 @@
 				704D277F26A58C76001D3E24 /* SearchViewDelegate.swift in Sources */,
 				704D279D26A58D88001D3E24 /* LocationManager.swift in Sources */,
 				704D278826A58CC3001D3E24 /* SearchCollectionViewCell.swift in Sources */,
-				704D277B26A58C50001D3E24 /* SearchViewModel.swift in Sources */,
+				704D277B26A58C50001D3E24 /* SearchViewModelImp.swift in Sources */,
 				704D278626A58CB2001D3E24 /* SearchCollectionViewDelegate.swift in Sources */,
 				704D276E26A58BD8001D3E24 /* BillboardRouter.swift in Sources */,
 				7023488C26A5863C0018B60A /* NeshanHelper.m in Sources */,
@@ -552,7 +556,7 @@
 				704D278126A58C84001D3E24 /* SearchViewTextFieldDelegate.swift in Sources */,
 				704D275426A58A7D001D3E24 /* MapViewModel.swift in Sources */,
 				704D277926A58C3B001D3E24 /* SearchModel.swift in Sources */,
-				704D277226A58BF0001D3E24 /* BillboardDelegate.swift in Sources */,
+				704D277226A58BF0001D3E24 /* BillboardViewDelegate.swift in Sources */,
 				704D275B26A58AC0001D3E24 /* MapViewDelegate.swift in Sources */,
 				7023487926A586200018B60A /* SceneDelegate.swift in Sources */,
 				704D279126A58D00001D3E24 /* SearchLocationRepository.swift in Sources */,

@@ -17,8 +17,8 @@ final class BillboardRouter: BilboardUseCases{
     weak var billboardView: UIView?
     weak var view: UIView?
     
-    weak var viewModel: mapViewModelDelegate?
-    init(viewModel:mapViewModelDelegate) {
+    weak var viewModel: MapViewViewModel?
+    init(viewModel:MapViewViewModel) {
         self.viewModel = viewModel
     }
     

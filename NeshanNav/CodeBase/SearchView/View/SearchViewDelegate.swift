@@ -7,18 +7,18 @@
 
 import Foundation
 
-protocol SearchDelegate: AnyObject {
+protocol SearchViewDelegate: AnyObject {
     func openSearchView()
     func closeSearchView()
-    func isLoading(isLoading: Bool)
+    func isLoading(_ status: Bool)
     func loadSearchList(items: [SearchItem])
 }
 
-extension SearchView: SearchDelegate{
+extension SearchView: SearchViewDelegate{
     
-    func isLoading(isLoading:Bool) {
+    func isLoading(_ status:Bool) {
         DispatchQueue.main.async {
-            if isLoading {
+            if status {
                 self.activityIndactor.startAnimating()
             }else{
                 self.activityIndactor.stopAnimating()
@@ -49,7 +49,7 @@ extension SearchView: SearchDelegate{
     
 
     func loadSearchList(items:[SearchItem]){
-        isLoading(isLoading: false)
+        isLoading(false)
         let dataSource = SearchCollectionViewDataSource(models: items,
                                               reuseIdentifier: ListCellIdentifire,
                                               cellConfigurator: { viewModel, cell in

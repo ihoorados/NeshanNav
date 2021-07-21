@@ -15,9 +15,9 @@ class MapView: UIViewController{
              - mapViewModelDelegate
              - LocationManagerDelegate
      */
-    var viewModel: mapViewModelDelegate
+    var viewModel: MapViewViewModel
     var locationManagerDelegate:LocationManagerDelegate
-    init(ViewModel: MapViewViewModel = MapViewViewModel(),
+    init(ViewModel: MapViewViewModelImp = MapViewViewModelImp(),
          locationManager:LocationManagerDelegate = LocationManager()) {
         viewModel = ViewModel
         locationManagerDelegate = locationManager
@@ -90,9 +90,9 @@ class MapView: UIViewController{
     fileprivate func initSetup(){
         setupUIView()
         setupUILayout()
+        setupMapView()
         setupBillboardView()
         setupSearchView()
-        setupMapView()
         setupLocationManager()
         setupMapEventListener()
     }

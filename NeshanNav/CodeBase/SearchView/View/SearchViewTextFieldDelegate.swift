@@ -18,7 +18,7 @@ extension SearchView: UITextFieldDelegate{
         guard let text = textField.text else {
             return
         }
-        isLoading(isLoading: true)
+        isLoading(_ status: true)
         viewModel.requestForSearchingLocation(term: text)
     }
     

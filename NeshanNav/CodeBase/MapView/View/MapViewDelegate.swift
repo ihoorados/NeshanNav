@@ -48,10 +48,12 @@ extension MapView: MapViewDelegate{
             // Add All Line in NTVectorElementLayer
             self.routeShapeLayer.add(line)
             
-            //
+            // Create viewportBounds and Bounds For Cover All Route Shape Lines in mapView
             let scale: CGFloat = UIScreen.main.scale
             let viewportBounds = NTViewportBounds(min: NTViewportPosition(x: 0, y: 0), max: NTViewportPosition(x: Float(self.mapView.frame.size.width * scale), y: Float((self.mapView.frame.size.height - self.billboardContainerView.frame.height) * scale)))
             let bounds = line?.getBounds()
+
+            //  Move mapView To toCameraBounds
             self.mapView.move(toCameraBounds: bounds, viewportBounds: viewportBounds, integerZoom: true, durationSeconds: 0.9)
         }
         print("🟢 MapViewDelegate: Route Shape Add To MapView")
@@ -89,6 +91,7 @@ extension MapView: MapViewDelegate{
     // MARK: - Add Marker
     ///        This function gets a LngLat as input and adds a marker on that position
     func addSelectedLocationMarker(loc: NTLngLat) {
+        
         // Clear Previous route Shape Layer
         routeShapeLayer.clear()
         // Clear Previuose Marker
@@ -108,11 +111,11 @@ extension MapView: MapViewDelegate{
     // MARK: MapView Close Billboard
     func cleanMapViewLayers(){
         DispatchQueue.main.async {
+            self.timer?.invalidate()
             self.routeShapeLayer.clear()
             self.destinationMarkerLayer.clear()
             self.mapView.setTilt(90, durationSeconds: 0)
-            self.mapView.setZoom(17, durationSeconds: 0.5)
-            self.timer?.invalidate()
+            self.mapView.setZoom(17, durationSeconds: 0.0)
         }
         print("🟢 MapViewDelegate: Close Billboard")
     }
