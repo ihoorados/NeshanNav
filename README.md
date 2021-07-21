@@ -15,4 +15,6 @@ Installation
 Dependencies in this project are provided via Cocoapods. Please install all dependecies with
 
 pod install
-![Screenshot](NeshanNavScreens.png)
+![Screenshot](![Uploading image.png…]())
+![Screenshot](![Uploading image.png…]())
+![Screenshot](![Uploading image.png…]())
