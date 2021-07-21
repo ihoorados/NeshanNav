@@ -160,20 +160,18 @@ class SearchView: UIViewController {
                                height: 48, cornerRadius: 25)
         searchTextFeild.centerY(inView: liveUserLocationButton)
         
-        ContainerView.anchor(top: self.searchTextFeild.safeAreaLayoutGuide.bottomAnchor,
-                             left: self.view.leftAnchor,
-                             bottom: self.view.safeAreaLayoutGuide.bottomAnchor,
-                             right: self.view.rightAnchor,
+        ContainerView.anchor(top: searchTextFeild.safeAreaLayoutGuide.bottomAnchor,
+                             left: view.leftAnchor,
+                             bottom: view.bottomAnchor,
+                             right: view.rightAnchor,
                              paddingTop: 32.0,
                              paddingLeft: 0.0,
-                             paddingBottom: 16.0,
                              paddingRight: 0.0,
                              cornerRadius: 25)
         
-        
         searchListCollectionView.anchor(top: ContainerView.topAnchor,
                                       left: ContainerView.leftAnchor,
-                                      bottom: ContainerView.safeAreaLayoutGuide.bottomAnchor,
+                                      bottom: ContainerView.bottomAnchor,
                                       right: ContainerView.rightAnchor,
                                       paddingTop: 24.0,
                                       paddingLeft: 0.0,
@@ -181,6 +179,7 @@ class SearchView: UIViewController {
                                       cornerRadius: 0.0)
         
         activityIndactor.center = view.center
+        view.layoutIfNeeded()
         print("✅ SearchView : setup UILayouts Completed.")
     }
     

@@ -20,6 +20,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
         label.font = UIFont(name: "IRANYekanMobile", size: 19)!
         label.textColor = .darkText
         label.textAlignment = .right
+        label.numberOfLines = 2
         return label
     }()
     
@@ -61,7 +62,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
                              right: rightAnchor,
                              paddingTop: 0.0,
                              paddingBottom: 0.0,
-                             cornerRadius: 16)
+                             cornerRadius: 12)
         
         titleLabel.anchor(top: ContainerView.topAnchor,
                           left: ContainerView.leftAnchor,
