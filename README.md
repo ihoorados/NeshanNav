@@ -16,9 +16,7 @@ Dependencies in this project are provided via Cocoapods. Please install all depe
 
 pod install
 
-![](Simulator Screen2.png)
-![](Simulator Screen Shot3.png)
-![](Simulator Screen1png.png)
+Here is an inline ![smiley](Simulator Screen Shot3.png){:height="36px" width="36px"}.
 
 
 ![image](Simulator Screen2.png "Title" {width=40px height=400px})
