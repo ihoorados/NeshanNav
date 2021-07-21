@@ -9,14 +9,14 @@ import Foundation
 import CoreLocation
 
 
-protocol LocationManagerDelegate: AnyObject {
+protocol LocationManager: AnyObject {
     func StartUpdatingUserLocation()
     func StopUpdatingUserLocation()
     func CheckLocationPermission()
     var  didUpdateLocationsAction: ((_ location: CLLocation) -> Void)?  { get set }
 }
 
-class LocationManager:NSObject, CLLocationManagerDelegate,LocationManagerDelegate{
+class LocationManagerImpl:NSObject, CLLocationManagerDelegate,LocationManager{
     
     // MARK: Call Back Action
     var didUpdateLocationsAction:((_ location:CLLocation)->Void)?

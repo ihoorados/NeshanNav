@@ -29,7 +29,9 @@ final class AppCoordinator: Coordinator {
     
     func rootViewController() -> UIViewController {
         // Create Map View VC
-        let rootVC = MapView()
+        let viewModel = MapViewViewModelImpl()
+        let rootVC = MapView(viewModel: viewModel)
+        viewModel.mapViewDelegate = rootVC
         return rootVC
     }
     

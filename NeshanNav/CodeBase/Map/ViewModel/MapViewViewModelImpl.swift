@@ -1,17 +1,16 @@
 //
-//  MapViewModel.swift
+//  MapViewModelDelegate.swift
 //  NeshanNav
 //
 //  Created by Hoorad Ramezani on 7/19/21.
 //
-
 
 import Foundation
 import CoreLocation
 
 
 // MARK: Map View Model Class
-class MapViewViewModel{
+class MapViewViewModelImpl{
     
     // MARK: Properties
     var userLocation:       NTLngLat = NTLngLat(x: 59.59853417839179, y: 36.26763274005621)
@@ -42,16 +41,20 @@ class MapViewViewModel{
     }
     
     func requestForLocationInfo(with location:Location){
+        
         billboardDelegate?.isLoading(loading: true)
+        
         locationRepo.getLocationInfoOverNetwork(at: location) { [weak self] result in
             self?.billboardDelegate?.isLoading(loading: false)
             switch result{
                 case .success(let data):
+                    
                     self?.billboardDelegate?.updateViewDataModel(with: data)
                     self?.billboardRouter?.CTATapped = { [weak self] in
                         self?.startFindingRoute()
                     }
                 case.failure(_):
+                    
                     self?.billboardDelegate?.updateViewDataWithError()
                     self?.billboardRouter?.CTATapped = { [weak self] in
                         self?.requestForLocationInfo(with: location)
@@ -76,11 +79,14 @@ class MapViewViewModel{
     }
     
     func requestForDistance(from:NTLngLat,to:NTLngLat){
+        
         billboardDelegate?.isLoading(loading: true)
+        
         routeDistanceRepo.getDistanceMatrixOverNetwork(pointA: from, PointB: to) { [weak self] result in
             self?.billboardDelegate?.isLoading(loading: false)
             switch result {
                 case .success(let distance):
+                    
                     guard let element = distance.rows.first?.elements.first else {
                         self?.billboardDelegate?.updateViewDataWithError()
                         self?.billboardRouter?.CTATapped = { [weak self] in
@@ -116,8 +122,79 @@ class MapViewViewModel{
 }
 
 
+
+// MARK: Map View Model Delegate IMP
+extension MapViewViewModelImpl: MapViewViewModel{
+    
+    
+    func cleanMapViewLayer() {
+        mapViewDelegate?.cleanMapViewLayers()
+    }
+    
+    func cameraMoveToUserLocation() {
+        mapViewDelegate?.cameraRouteToLocation(loc: userLocation)
+        mapViewDelegate?.addUserLiveLocationMarker(loc: userLocation)
+    }
+    
+    func updateUserLocation(with location:CLLocation){
+//        IF You Want Update Current User Device Location uncomment Below Lines
+        
+//        let x = location.coordinate.latitude
+//        let y = location.coordinate.longitude
+//        userLocation = NTLngLat(x: x,y: y)
+//        mapViewDelegate?.cameraRouteToLocation(location: userLocation)
+//        mapViewDelegate?.addUserLiveLocationMarker(userLocation)
+    }
+    
+    func userSelectLocation(at location:NTLngLat){
+        selectedLocation = location
+        mapViewDelegate?.addSelectedLocationMarker(loc: location)
+        mapViewDelegate?.cameraRouteToLocation(loc: location)
+        requestForLocationInfo(with: Location(latitude: location.getY(), longitude: location.getX()))
+    }
+    
+    func startNavigateOnRoutes() {
+        let locations = getLocationsForMockNavigate(locations: routesLocations)
+        mapViewDelegate?.startMockNavigation(on: locations)
+        billboardDelegate?.updateViewToNavigateState()
+    }
+    
+    func startFindingRoute() {
+        guard let location = selectedLocation else {
+            return
+        }
+        mapViewDelegate?.addUserLiveLocationMarker(loc: userLocation)
+        requestForRoutes(from: userLocation, to: location)
+        requestForDistance(from: userLocation, to: location)
+    }
+    
+
+    func getBearingBetweenTwoPoints1(point1 : CLLocation, point2 : CLLocation) -> Double {
+
+        let lat1 = degreesToRadians(degrees: point1.coordinate.latitude)
+        let lon1 = degreesToRadians(degrees: point1.coordinate.longitude)
+
+        let lat2 = degreesToRadians(degrees: point2.coordinate.latitude)
+        let lon2 = degreesToRadians(degrees: point2.coordinate.longitude)
+
+        let dLon = lon2 - lon1
+
+        let y = sin(dLon) * cos(lat2)
+        let x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(dLon)
+                
+        let radiansBearing = atan2(y, x)
+        var degrees = radiansToDegrees(radians: radiansBearing)
+        degrees = (360 - ((degrees + 360).truncatingRemainder(dividingBy: 360)))
+        return degrees
+    }
+    
+    
+}
+
+
+
 // MARK: Decode encoded String To CLLocationCoordinate2D
-extension MapViewViewModel{
+extension MapViewViewModelImpl{
     
     // MARK: Helper
     

@@ -18,7 +18,7 @@
 		704D274F26A58A24001D3E24 /* RoutesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D274E26A58A24001D3E24 /* RoutesModel.swift */; };
 		704D275126A58A57001D3E24 /* DistanceMatrixModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D275026A58A57001D3E24 /* DistanceMatrixModel.swift */; };
 		704D275426A58A7D001D3E24 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D275326A58A7D001D3E24 /* MapViewModel.swift */; };
-		704D275626A58A8D001D3E24 /* MapViewViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D275526A58A8D001D3E24 /* MapViewViewModelImp.swift */; };
+		704D275626A58A8D001D3E24 /* MapViewViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D275526A58A8D001D3E24 /* MapViewViewModelImpl.swift */; };
 		704D275926A58AA5001D3E24 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D275826A58AA5001D3E24 /* MapView.swift */; };
 		704D275B26A58AC0001D3E24 /* MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D275A26A58AC0001D3E24 /* MapViewDelegate.swift */; };
 		704D276C26A58BC0001D3E24 /* BillboardUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D276B26A58BC0001D3E24 /* BillboardUseCases.swift */; };
@@ -43,7 +43,7 @@
 		704D279626A58D4C001D3E24 /* URLRequestLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D279526A58D4C001D3E24 /* URLRequestLog.swift */; };
 		704D279826A58D5A001D3E24 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D279726A58D5A001D3E24 /* NetworkError.swift */; };
 		704D279A26A58D69001D3E24 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D279926A58D69001D3E24 /* EndPoint.swift */; };
-		704D279D26A58D88001D3E24 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D279C26A58D88001D3E24 /* LocationManager.swift */; };
+		704D279D26A58D88001D3E24 /* LocationManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D279C26A58D88001D3E24 /* LocationManagerImpl.swift */; };
 		704D27A026A58DA5001D3E24 /* UILayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D279F26A58DA5001D3E24 /* UILayout.swift */; };
 		704D27A226A58DB6001D3E24 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D27A126A58DB6001D3E24 /* UIViewController.swift */; };
 		704D27A426A58DC6001D3E24 /* NTCTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D27A326A58DC6001D3E24 /* NTCTAButton.swift */; };
@@ -76,7 +76,7 @@
 		704D274E26A58A24001D3E24 /* RoutesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesModel.swift; sourceTree = "<group>"; };
 		704D275026A58A57001D3E24 /* DistanceMatrixModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceMatrixModel.swift; sourceTree = "<group>"; };
 		704D275326A58A7D001D3E24 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
-		704D275526A58A8D001D3E24 /* MapViewViewModelImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewViewModelImp.swift; sourceTree = "<group>"; };
+		704D275526A58A8D001D3E24 /* MapViewViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewViewModelImpl.swift; sourceTree = "<group>"; };
 		704D275826A58AA5001D3E24 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		704D275A26A58AC0001D3E24 /* MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewDelegate.swift; sourceTree = "<group>"; };
 		704D276B26A58BC0001D3E24 /* BillboardUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillboardUseCases.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		704D279526A58D4C001D3E24 /* URLRequestLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestLog.swift; sourceTree = "<group>"; };
 		704D279726A58D5A001D3E24 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		704D279926A58D69001D3E24 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
-		704D279C26A58D88001D3E24 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		704D279C26A58D88001D3E24 /* LocationManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerImpl.swift; sourceTree = "<group>"; };
 		704D279F26A58DA5001D3E24 /* UILayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILayout.swift; sourceTree = "<group>"; };
 		704D27A126A58DB6001D3E24 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		704D27A326A58DC6001D3E24 /* NTCTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTCTAButton.swift; sourceTree = "<group>"; };
@@ -189,9 +189,9 @@
 			isa = PBXGroup;
 			children = (
 				704D274926A589E2001D3E24 /* Coordinator */,
-				704D274C26A58A04001D3E24 /* MapView */,
+				704D274C26A58A04001D3E24 /* Map */,
 				704D276A26A58BA8001D3E24 /* Billboard */,
-				704D277326A58C06001D3E24 /* SearchView */,
+				704D277326A58C06001D3E24 /* Search */,
 				704D278226A58C92001D3E24 /* Search Collection View */,
 				704D278926A58CDA001D3E24 /* Repository */,
 				704D279226A58D20001D3E24 /* NetworkLayer */,
@@ -209,14 +209,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		704D274C26A58A04001D3E24 /* MapView */ = {
+		704D274C26A58A04001D3E24 /* Map */ = {
 			isa = PBXGroup;
 			children = (
 				704D274D26A58A0A001D3E24 /* Model */,
 				704D275726A58A9A001D3E24 /* View */,
 				704D275226A58A62001D3E24 /* ViewModel */,
 			);
-			path = MapView;
+			path = Map;
 			sourceTree = "<group>";
 		};
 		704D274D26A58A0A001D3E24 /* Model */ = {
@@ -232,7 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				704D275326A58A7D001D3E24 /* MapViewModel.swift */,
-				704D275526A58A8D001D3E24 /* MapViewViewModelImp.swift */,
+				704D275526A58A8D001D3E24 /* MapViewViewModelImpl.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -256,7 +256,7 @@
 			path = Billboard;
 			sourceTree = "<group>";
 		};
-		704D277326A58C06001D3E24 /* SearchView */ = {
+		704D277326A58C06001D3E24 /* Search */ = {
 			isa = PBXGroup;
 			children = (
 				704D27BE26A5909D001D3E24 /* UseCase */,
@@ -265,7 +265,7 @@
 				704D27BD26A59092001D3E24 /* View */,
 				704D27C026A590AB001D3E24 /* ViewModel */,
 			);
-			path = SearchView;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		704D278226A58C92001D3E24 /* Search Collection View */ = {
@@ -303,7 +303,7 @@
 		704D279B26A58D72001D3E24 /* LocationManager */ = {
 			isa = PBXGroup;
 			children = (
-				704D279C26A58D88001D3E24 /* LocationManager.swift */,
+				704D279C26A58D88001D3E24 /* LocationManagerImpl.swift */,
 			);
 			path = LocationManager;
 			sourceTree = "<group>";
@@ -534,7 +534,7 @@
 				704D27A026A58DA5001D3E24 /* UILayout.swift in Sources */,
 				704D279826A58D5A001D3E24 /* NetworkError.swift in Sources */,
 				7023487726A586200018B60A /* AppDelegate.swift in Sources */,
-				704D275626A58A8D001D3E24 /* MapViewViewModelImp.swift in Sources */,
+				704D275626A58A8D001D3E24 /* MapViewViewModelImpl.swift in Sources */,
 				704D278B26A58CE3001D3E24 /* MapRoutesRepository.swift in Sources */,
 				704D279626A58D4C001D3E24 /* URLRequestLog.swift in Sources */,
 				704D279A26A58D69001D3E24 /* EndPoint.swift in Sources */,
@@ -543,7 +543,7 @@
 				704D27A426A58DC6001D3E24 /* NTCTAButton.swift in Sources */,
 				704D27A226A58DB6001D3E24 /* UIViewController.swift in Sources */,
 				704D277F26A58C76001D3E24 /* SearchViewDelegate.swift in Sources */,
-				704D279D26A58D88001D3E24 /* LocationManager.swift in Sources */,
+				704D279D26A58D88001D3E24 /* LocationManagerImpl.swift in Sources */,
 				704D278826A58CC3001D3E24 /* SearchCollectionViewCell.swift in Sources */,
 				704D277B26A58C50001D3E24 /* SearchViewModelImp.swift in Sources */,
 				704D278626A58CB2001D3E24 /* SearchCollectionViewDelegate.swift in Sources */,

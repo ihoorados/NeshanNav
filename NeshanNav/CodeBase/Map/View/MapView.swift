@@ -12,18 +12,19 @@ class MapView: UIViewController{
     
     // MARK: - Dependency Injection
     /*
-             - mapViewModelDelegate
-             - LocationManagerDelegate
+             - MapViewViewModel
+             - LocationManager
      */
     var viewModel: MapViewViewModel
-    var locationManagerDelegate:LocationManagerDelegate
-    init(ViewModel: MapViewViewModelImp = MapViewViewModelImp(),
-         locationManager:LocationManagerDelegate = LocationManager()) {
-        viewModel = ViewModel
-        locationManagerDelegate = locationManager
+    var locationManager: LocationManager
+    init(viewModel: MapViewViewModel = MapViewViewModelImpl(),
+         locationManager:LocationManager = LocationManagerImpl()) {
+        self.viewModel = viewModel
+        self.locationManager = locationManager
         super.init(nibName: nil, bundle: nil)
-        viewModel.mapViewDelegate = self
     }
+    
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -134,8 +135,8 @@ class MapView: UIViewController{
     // MARK: Setup Location Manager
     ///      This function setup location manager to get live user location
     fileprivate func setupLocationManager() {
-        locationManagerDelegate.CheckLocationPermission()
-        locationManagerDelegate.didUpdateLocationsAction = { [weak self] location in
+        locationManager.CheckLocationPermission()
+        locationManager.didUpdateLocationsAction = { [weak self] location in
             self?.viewModel.updateUserLocation(with: location)
         }
         print("✅ MapView : setup Location Manager completed.")

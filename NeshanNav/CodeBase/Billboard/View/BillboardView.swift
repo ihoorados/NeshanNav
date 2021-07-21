@@ -129,8 +129,6 @@ class BillboardView: UIViewController {
         view.addSubview(CTAButton)
         view.addSubview(spinner)
         
-        
-        
         view.addSubview(routeNameStackView)
         view.addSubview(routeAddressStackView)
         
