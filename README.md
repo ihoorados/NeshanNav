@@ -22,10 +22,19 @@ All you need to start with this project is
 
 If you don't have cocoapods on your mac, or you don't know what cocoapod is, check this out https://cocoapods.org/
 
-Installation
+# Installation
 
 Neshan SDK
 
 Dependencies in this project are provided via Cocoapods. Please install all dependecies with
+After cloning project from Github, open terminal and navigate in project folder
 
-pod install
+> cd /your_loca_path/NeshanNav
+
+next, install all pods with command.
+
+> pod install
+
+When all pods are installed, open project folder by digit on terminal
+
+> open .
