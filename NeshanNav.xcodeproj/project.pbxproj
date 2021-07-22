@@ -58,7 +58,6 @@
 		704D27B726A58E81001D3E24 /* IRANYekanMobileMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 704D27AF26A58E81001D3E24 /* IRANYekanMobileMedium.ttf */; };
 		704D27B926A58E92001D3E24 /* neshan.license in Resources */ = {isa = PBXBuildFile; fileRef = 704D27B826A58E92001D3E24 /* neshan.license */; };
 		70796EF226A80EE50095361C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70796EF126A80EE50095361C /* SearchViewModel.swift */; };
-		70796EF426A8B3AF0095361C /* QuickAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70796EF326A8B3AF0095361C /* QuickAddressView.swift */; };
 		708A733226A96115000F27D3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708A733126A96115000F27D3 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,7 +117,6 @@
 		704D27AF26A58E81001D3E24 /* IRANYekanMobileMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanMobileMedium.ttf; sourceTree = "<group>"; };
 		704D27B826A58E92001D3E24 /* neshan.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neshan.license; sourceTree = "<group>"; };
 		70796EF126A80EE50095361C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		70796EF326A8B3AF0095361C /* QuickAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAddressView.swift; sourceTree = "<group>"; };
 		708A733126A96115000F27D3 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A3EC6B53FCABAD45F9A4B5FB /* Pods-NeshanNav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeshanNav.release.xcconfig"; path = "Target Support Files/Pods-NeshanNav/Pods-NeshanNav.release.xcconfig"; sourceTree = "<group>"; };
 		F2F371B7A1DE9F42754E5F5C /* Pods_NeshanNav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeshanNav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,7 +199,6 @@
 				704D279226A58D20001D3E24 /* NetworkLayer */,
 				704D279B26A58D72001D3E24 /* LocationManager */,
 				704D279E26A58D8F001D3E24 /* Utils */,
-				70796EF326A8B3AF0095361C /* QuickAddressView.swift */,
 			);
 			path = CodeBase;
 			sourceTree = "<group>";
@@ -535,7 +532,6 @@
 				704D278426A58CA3001D3E24 /* SearchCollectionViewDataSource.swift in Sources */,
 				704D274B26A589F5001D3E24 /* AppCoordinator.swift in Sources */,
 				704D277D26A58C5E001D3E24 /* SearchView.swift in Sources */,
-				70796EF426A8B3AF0095361C /* QuickAddressView.swift in Sources */,
 				70796EF226A80EE50095361C /* SearchViewModel.swift in Sources */,
 				704D276C26A58BC0001D3E24 /* BillboardUseCases.swift in Sources */,
 				704D27A026A58DA5001D3E24 /* UILayout.swift in Sources */,

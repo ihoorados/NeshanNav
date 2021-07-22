@@ -14,7 +14,7 @@ class LocationManagerImpl:NSObject, CLLocationManagerDelegate,LocationManager{
     var didUpdateLocations:((_ location:CLLocation)->Void)?
     
     //MARK: Location Manager
-    var locationManager: CLLocationManager
+    private var locationManager: CLLocationManager
     init(locationManager: CLLocationManager = CLLocationManager()) {
         self.locationManager = locationManager
         super.init()
@@ -35,7 +35,7 @@ class LocationManagerImpl:NSObject, CLLocationManagerDelegate,LocationManager{
             switch CLLocationManager.authorizationStatus() {
                 case .notDetermined, .restricted, .denied:
                     print("🔴 MapView: No access To Location Service")
-                    locationManager.requestWhenInUseAuthorization()
+                    requestWhenInUseAuthorization()
                 case .authorizedAlways, .authorizedWhenInUse:
                     print("🟢 MapView: Access To Location Service.")
                 @unknown default:
@@ -43,8 +43,12 @@ class LocationManagerImpl:NSObject, CLLocationManagerDelegate,LocationManager{
             }
         } else {
                 print("🔵 MapView: Location services are not enabled")
-                locationManager.requestWhenInUseAuthorization()
+                requestWhenInUseAuthorization()
         }
+    }
+    
+    private func requestWhenInUseAuthorization(){
+        locationManager.requestWhenInUseAuthorization()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
