@@ -136,7 +136,7 @@ class MapView: UIViewController{
     ///      This function setup location manager to get live user location
     fileprivate func setupLocationManager() {
         locationManager.CheckLocationPermission()
-        locationManager.didUpdateLocationsAction = { [weak self] location in
+        locationManager.didUpdateLocations = { [weak self] location in
             self?.viewModel.updateUserLocation(with: location)
         }
         print("✅ MapView : setup Location Manager completed.")

@@ -11,13 +11,13 @@ protocol BillboardDelegate: AnyObject {
     func updateViewDataModel(with route: RouteModel)
     func updateViewDataModel(with distance: Element)
     func updateViewToNavigateState()
-    func isLoading(loading:Bool)
+    func isLoading(_ loading:Bool)
     func updateViewDataWithError()
 }
 
 extension BillboardView: BillboardDelegate{
     
-    func isLoading(loading: Bool) {
+    func isLoading(_ loading: Bool) {
         DispatchQueue.main.async {
             if loading{
                 self.spinner.startAnimating()

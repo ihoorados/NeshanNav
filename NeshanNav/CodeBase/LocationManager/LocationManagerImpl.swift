@@ -8,18 +8,10 @@
 import Foundation
 import CoreLocation
 
-
-protocol LocationManager: AnyObject {
-    func StartUpdatingUserLocation()
-    func StopUpdatingUserLocation()
-    func CheckLocationPermission()
-    var  didUpdateLocationsAction: ((_ location: CLLocation) -> Void)?  { get set }
-}
-
 class LocationManagerImpl:NSObject, CLLocationManagerDelegate,LocationManager{
     
     // MARK: Call Back Action
-    var didUpdateLocationsAction:((_ location:CLLocation)->Void)?
+    var didUpdateLocations:((_ location:CLLocation)->Void)?
     
     //MARK: Location Manager
     var locationManager: CLLocationManager
@@ -63,6 +55,6 @@ class LocationManagerImpl:NSObject, CLLocationManagerDelegate,LocationManager{
         guard let location = locations.last else {
             return
         }
-        didUpdateLocationsAction?(location)
+        didUpdateLocations?(location)
     }
 }

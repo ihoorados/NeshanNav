@@ -59,6 +59,7 @@
 		704D27B926A58E92001D3E24 /* neshan.license in Resources */ = {isa = PBXBuildFile; fileRef = 704D27B826A58E92001D3E24 /* neshan.license */; };
 		70796EF226A80EE50095361C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70796EF126A80EE50095361C /* SearchViewModel.swift */; };
 		70796EF426A8B3AF0095361C /* QuickAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70796EF326A8B3AF0095361C /* QuickAddressView.swift */; };
+		708A733226A96115000F27D3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708A733126A96115000F27D3 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +119,7 @@
 		704D27B826A58E92001D3E24 /* neshan.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neshan.license; sourceTree = "<group>"; };
 		70796EF126A80EE50095361C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		70796EF326A8B3AF0095361C /* QuickAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAddressView.swift; sourceTree = "<group>"; };
+		708A733126A96115000F27D3 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A3EC6B53FCABAD45F9A4B5FB /* Pods-NeshanNav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeshanNav.release.xcconfig"; path = "Target Support Files/Pods-NeshanNav/Pods-NeshanNav.release.xcconfig"; sourceTree = "<group>"; };
 		F2F371B7A1DE9F42754E5F5C /* Pods_NeshanNav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeshanNav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -306,6 +308,7 @@
 		704D279B26A58D72001D3E24 /* LocationManager */ = {
 			isa = PBXGroup;
 			children = (
+				708A733126A96115000F27D3 /* LocationManager.swift */,
 				704D279C26A58D88001D3E24 /* LocationManagerImpl.swift */,
 			);
 			path = LocationManager;
@@ -540,6 +543,7 @@
 				7023487726A586200018B60A /* AppDelegate.swift in Sources */,
 				704D275626A58A8D001D3E24 /* MapViewViewModelImpl.swift in Sources */,
 				704D278B26A58CE3001D3E24 /* MapRoutesRepository.swift in Sources */,
+				708A733226A96115000F27D3 /* LocationManager.swift in Sources */,
 				704D279626A58D4C001D3E24 /* URLRequestLog.swift in Sources */,
 				704D279A26A58D69001D3E24 /* EndPoint.swift in Sources */,
 				704D277726A58C2D001D3E24 /* SearchRouter.swift in Sources */,

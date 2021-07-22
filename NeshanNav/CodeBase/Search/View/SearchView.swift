@@ -12,18 +12,16 @@ class SearchView: UIViewController {
 
     // MARK: - Dependency Injection
     /*
-             - Protocol SearchUseCases
+             - SearchUseCases
+             - SearchViewModel
      */
-    //var viewModel : BillboardViewModelDelegate
-    
-    var ListDataSource: SearchCollectionViewDataSource?
-    var ListDelegate: SearchCollectionViewDelegate?
-
-    var viewModel: SearchViewModel = SearchViewModelImpl()
-    init(delegate: SearchUseCases) {
+    var viewModel: SearchViewModel
+    init(delegate: SearchUseCases,
+         viewModel: SearchViewModel = SearchViewModelImpl()) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        viewModel.searchViewDelegate = self
-        viewModel.delegate = delegate
+        self.viewModel.searchViewDelegate = self
+        self.viewModel.delegate = delegate
     }
     
     required init?(coder: NSCoder) {
@@ -44,14 +42,12 @@ class SearchView: UIViewController {
         closeSearchView()
     }
     
-    lazy var ContainerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        return view
-    }()
-
+    // MARK: UI Element
+    
+    var ListDataSource: SearchCollectionViewDataSource?
+    var ListDelegate: SearchCollectionViewDelegate?
     let ListCellIdentifire = "ListCellIdentifire"
-    // MARK: Lazy word Collection View object
+    // MARK: Collection View object
     lazy var searchListCollectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 8.0, left: 0.0, bottom: 8.0, right: 0.0)
@@ -64,6 +60,12 @@ class SearchView: UIViewController {
         CollectionView.showsHorizontalScrollIndicator = false
         CollectionView.backgroundColor = .white
         return CollectionView
+    }()
+    
+    lazy var ContainerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        return view
     }()
     
     lazy var searchTextFeild: UITextField = {

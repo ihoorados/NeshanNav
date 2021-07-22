@@ -42,10 +42,10 @@ class MapViewViewModelImpl{
     
     func requestForLocationInfo(with location:Location){
         
-        billboardDelegate?.isLoading(loading: true)
+        billboardDelegate?.isLoading(true)
         
         locationRepo.getLocationInfoOverNetwork(at: location) { [weak self] result in
-            self?.billboardDelegate?.isLoading(loading: false)
+            self?.billboardDelegate?.isLoading(false)
             switch result{
                 case .success(let data):
                     
@@ -64,7 +64,7 @@ class MapViewViewModelImpl{
     }
     
     func requestForRoutes(from:NTLngLat,to:NTLngLat){
-        billboardDelegate?.isLoading(loading: true)
+        billboardDelegate?.isLoading(true)
         routesRepo.getRouteInfoOverNetwork(pointA: from, PointB: to) { [weak self] result in
             switch result {
                 case .success(let routes):
@@ -80,10 +80,10 @@ class MapViewViewModelImpl{
     
     func requestForDistance(from:NTLngLat,to:NTLngLat){
         
-        billboardDelegate?.isLoading(loading: true)
+        billboardDelegate?.isLoading(true)
         
         routeDistanceRepo.getDistanceMatrixOverNetwork(pointA: from, PointB: to) { [weak self] result in
-            self?.billboardDelegate?.isLoading(loading: false)
+            self?.billboardDelegate?.isLoading(false)
             switch result {
                 case .success(let distance):
                     

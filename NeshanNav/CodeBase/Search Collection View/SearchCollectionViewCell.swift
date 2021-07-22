@@ -9,6 +9,13 @@ import Foundation
 
 class SearchCollectionViewCell: UICollectionViewCell {
     
+    func UpdateViewData(viewData:SearchItem){
+        titleLabel.text = viewData.title
+        addressLabel.text = viewData.address
+    }
+    
+    // MARK: UI Element
+    
     private var ContainerView: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGray6
@@ -43,11 +50,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
         fatalError("❌ init(coder:) has not been implemented")
     }
     
-    func UpdateViewData(viewData:SearchItem){
-        titleLabel.text = viewData.title
-        addressLabel.text = viewData.address
-    }
-    
     private func setupUIView(){
         addSubview(ContainerView)
         ContainerView.addSubview(titleLabel)
@@ -72,5 +74,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
                           left: ContainerView.leftAnchor,
                           right: ContainerView.rightAnchor)
     }
+
 
 }
