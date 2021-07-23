@@ -74,10 +74,11 @@ extension MapView: MapViewDelegate{
         // Creating marker style.
         let markStCr = NTMarkerStyleCreator()
         markStCr?.setAnimationStyle(animSt)
-        markStCr?.setSize(20)
-        let image = UIImage(systemName: "largecircle.fill.circle")?.withTintColor(.systemBlue)
+        markStCr?.setSize(22)
+        let image = UIImage(systemName: "largecircle.fill.circle")
         markStCr?.setBitmap(NTBitmapUtils.createBitmap(from: image))
         let markSt: NTMarkerStyle = markStCr!.buildStyle()
+        
         // Creating user marker
         userLocationMarker = NTMarker(pos: loc, style: markSt)
         // Adding user marker to userMarkerLayer, or showing marker on map!
@@ -125,10 +126,10 @@ extension MapView: MapViewDelegate{
     func startMockNavigation(on locs: [NTLngLat]){
         var locations = locs
         mapView.setTilt(40, durationSeconds: 0.5)
-        mapView.setZoom(19.0, durationSeconds: 0.5)
+        mapView.setZoom(17.0, durationSeconds: 0.5)
         cameraRouteToLocation(loc: locations.first!)
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.async {
             self.timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { [weak self] timer in
                 if locations.count > 1 {
                     
@@ -166,7 +167,7 @@ extension MapView: MapViewDelegate{
         // Creating marker style. We should use an object of type MarkerStyleCreator, set all features on it
         // and then call buildStyle method on it. This method returns an object of type MarkerStyle
         let markStCr = NTMarkerStyleCreator()
-        markStCr?.setSize(30)
+        markStCr?.setSize(40)
         markStCr?.setBitmap(NTBitmapUtils.createBitmap(from: UIImage(named: "RouteMarker")))
         // AnimationStyle object - that was created before - is used here
         markStCr?.setAnimationStyle(animSt)

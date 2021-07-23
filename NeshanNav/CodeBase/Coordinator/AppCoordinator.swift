@@ -27,7 +27,7 @@ final class AppCoordinator: Coordinator {
         window.makeKeyAndVisible()
     }
     
-    func rootViewController() -> UIViewController {
+    private func rootViewController() -> UIViewController {
         // Create Map View VC
         let viewModel = MapViewViewModelImpl()
         let rootVC = MapView(viewModel: viewModel)

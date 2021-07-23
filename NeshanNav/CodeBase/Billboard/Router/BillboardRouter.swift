@@ -32,7 +32,7 @@ final class BillboardRouter: BilboardUseCases{
                 self.billboardView?.frame.origin.y = view.frame.height - height
             })
         }
-    }    
+    }
     
     deinit {
         print("🗑 BillboardRouter: deinit frome memory.")

@@ -13,7 +13,7 @@ import CoreLocation
 class MapViewViewModelImpl{
     
     // MARK: Properties
-    var userLocation:       NTLngLat = NTLngLat(x: 59.59853417839179, y: 36.26763274005621)
+    var userLocation:       NTLngLat = NTLngLat(x: 51.38017870427075, y: 35.74147555549992)
     var selectedLocation:   NTLngLat?
     var routesLocations:    [NTLngLat] = [NTLngLat]()
 
@@ -123,7 +123,7 @@ class MapViewViewModelImpl{
 
 
 
-// MARK: Map View Model Delegate IMP
+// MARK: Map View Model Interface IMP functions
 extension MapViewViewModelImpl: MapViewViewModel{
     
     
@@ -154,7 +154,7 @@ extension MapViewViewModelImpl: MapViewViewModel{
     }
     
     func startNavigateOnRoutes() {
-        let locations = getLocationsForMockNavigate(locations: routesLocations)
+        let locations = getLocationsForMockNavigate(locations: routesLocations, speed: 4)
         mapViewDelegate?.startMockNavigation(on: locations)
         billboardDelegate?.updateViewToNavigateState()
     }
@@ -257,26 +257,25 @@ extension MapViewViewModelImpl{
         return locations
     }
     
-    func getLocationsForMockNavigate(locations:[NTLngLat]) -> [NTLngLat] {
+    func getLocationsForMockNavigate(locations:[NTLngLat],speed:Int) -> [NTLngLat] {
         var locationsArray = [NTLngLat]()
         locationsArray.removeAll()
         for i in 0...locations.count - 1{
             if i+1 > locations.count - 1{
                 break
             }
+            
             let loc1 = CLLocation(latitude: locations[i].getY(), longitude: locations[i].getX())
             let loc2 = CLLocation(latitude: locations[i+1].getY(), longitude: locations[i+1].getX())
-            
             let distance = loc1.distance(from: loc2)
             
-            if Int(distance) > 1 {
-                
+            if Int(distance) > speed {
                 let midArr = geographicMidpoints(startPoint: loc1.coordinate,
-                                                 endPoint: loc2.coordinate, total: distance)
+                                                 endPoint: loc2.coordinate,
+                                                 total: distance / Double(speed))
                 for loc in midArr {
                     locationsArray.append(NTLngLat(x: loc.longitude, y: loc.latitude))
                 }
-                
             }
         }
         return locationsArray

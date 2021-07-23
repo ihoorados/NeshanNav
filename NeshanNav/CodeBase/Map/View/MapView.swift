@@ -169,7 +169,7 @@ class MapView: UIViewController{
         mapView.getLayers()?.insert(TRAFFIC_INDEX, layer: NTNeshanServices.createTrafficLayer())
         
         // Setting map focal positionto a fixed position and setting camera zoom
-        mapView.setFocalPointPosition(NTLngLat(x: 59.5985341783917, y: 36.26763274005621), durationSeconds: 0.5)
+        mapView.setFocalPointPosition(viewModel.userLocation, durationSeconds: 0.5)
         mapView.setZoom(17, durationSeconds: 0.5)
         
         print("✅ MapView : setup MapView completed.")

@@ -24,7 +24,8 @@ class SearchViewModelImpl : SearchViewModel{
     
     
     func selectAddress(at indexPath:IndexPath){
-        guard let location = NTLngLat(x: listItem[indexPath.row].location.x, y: listItem[indexPath.row].location.y) else {
+        guard let location = NTLngLat(x: listItem[indexPath.row].location.x,
+                                      y: listItem[indexPath.row].location.y) else {
             return
         }
         delegate?.userSelectAddress(location: location)

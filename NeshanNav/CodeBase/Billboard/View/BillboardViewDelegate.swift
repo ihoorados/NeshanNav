@@ -52,7 +52,7 @@ extension BillboardView: BillboardDelegate{
     }
     
     func updateViewDataModel(with distance: Element) {
-        // Update Route Info Here
+        // Update Trip Info View Data Here
         DispatchQueue.main.async {
             self.titleLabel.text = "فاصله تا مقصد"
             self.routeaddressLabel.text = "\(distance.distance.text) , \(distance.duration.text)"
@@ -64,7 +64,6 @@ extension BillboardView: BillboardDelegate{
     }
     
     func updateViewToNavigateState() {
-        // Update Route Info Here
         DispatchQueue.main.async {
             self.HiddenCTAButton()
             self.delegate?.billboardChangetTo(height: 190)
