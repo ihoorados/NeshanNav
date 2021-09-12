@@ -13,7 +13,7 @@ protocol LocationInfoRepository {
     func getMockRouteInformation(at location: Location, _ completion: @escaping FetchCompletion)
 }
 
-struct LocationInfoRepositoryImp: LocationInfoRepository {
+struct LocationInfoRepositoryImpl: LocationInfoRepository {
     
     private var Service:DataTaskDelegate
     init(service:DataTaskDelegate = DataTaskService()) {

@@ -12,7 +12,7 @@ protocol MapRoutesRepository {
     func getRouteInfoOverNetwork(pointA:NTLngLat,PointB:NTLngLat,_ completion: @escaping RoutesFetchCompletion)
 }
 
-struct MapRoutesRepositoryImp: MapRoutesRepository {
+struct MapRoutesRepositoryImpl: MapRoutesRepository {
     
     private var Service:DataTaskDelegate
     init(service:DataTaskDelegate = DataTaskService()) {

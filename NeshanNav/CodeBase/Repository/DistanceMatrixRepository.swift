@@ -13,7 +13,7 @@ protocol DistanceMatrixRepository {
     func getDistanceMatrixOverNetwork(pointA:NTLngLat,PointB:NTLngLat,_ completion: @escaping FetchCompletion)
 }
 
-struct DistanceMatrixRepositoryImp: DistanceMatrixRepository {
+struct DistanceMatrixRepositoryImpl: DistanceMatrixRepository {
     
     private var Service:DataTaskDelegate
     init(service:DataTaskDelegate = DataTaskService()) {

@@ -59,6 +59,8 @@
 		704D27B926A58E92001D3E24 /* neshan.license in Resources */ = {isa = PBXBuildFile; fileRef = 704D27B826A58E92001D3E24 /* neshan.license */; };
 		70796EF226A80EE50095361C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70796EF126A80EE50095361C /* SearchViewModel.swift */; };
 		708A733226A96115000F27D3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708A733126A96115000F27D3 /* LocationManager.swift */; };
+		70B1AE9526EDE4CB00B15ADB /* SendReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1AE9426EDE4CB00B15ADB /* SendReportViewController.swift */; };
+		70B1AE9726EDE4DD00B15ADB /* SendReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1AE9626EDE4DD00B15ADB /* SendReportViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +120,8 @@
 		704D27B826A58E92001D3E24 /* neshan.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neshan.license; sourceTree = "<group>"; };
 		70796EF126A80EE50095361C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		708A733126A96115000F27D3 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		70B1AE9426EDE4CB00B15ADB /* SendReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendReportViewController.swift; sourceTree = "<group>"; };
+		70B1AE9626EDE4DD00B15ADB /* SendReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendReportViewModel.swift; sourceTree = "<group>"; };
 		A3EC6B53FCABAD45F9A4B5FB /* Pods-NeshanNav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeshanNav.release.xcconfig"; path = "Target Support Files/Pods-NeshanNav/Pods-NeshanNav.release.xcconfig"; sourceTree = "<group>"; };
 		F2F371B7A1DE9F42754E5F5C /* Pods_NeshanNav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeshanNav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -190,11 +194,12 @@
 		7023489026A588360018B60A /* CodeBase */ = {
 			isa = PBXGroup;
 			children = (
+				70B1AE9326EDE48900B15ADB /* SendReport */,
 				704D274926A589E2001D3E24 /* Coordinator */,
 				704D274C26A58A04001D3E24 /* Map */,
 				704D276A26A58BA8001D3E24 /* Billboard */,
 				704D277326A58C06001D3E24 /* Search */,
-				704D278226A58C92001D3E24 /* Search Collection View */,
+				704D278226A58C92001D3E24 /* Search Collection */,
 				704D278926A58CDA001D3E24 /* Repository */,
 				704D279226A58D20001D3E24 /* NetworkLayer */,
 				704D279B26A58D72001D3E24 /* LocationManager */,
@@ -270,14 +275,14 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		704D278226A58C92001D3E24 /* Search Collection View */ = {
+		704D278226A58C92001D3E24 /* Search Collection */ = {
 			isa = PBXGroup;
 			children = (
 				704D278326A58CA3001D3E24 /* SearchCollectionViewDataSource.swift */,
 				704D278526A58CB2001D3E24 /* SearchCollectionViewDelegate.swift */,
 				704D278726A58CC3001D3E24 /* SearchCollectionViewCell.swift */,
 			);
-			path = "Search Collection View";
+			path = "Search Collection";
 			sourceTree = "<group>";
 		};
 		704D278926A58CDA001D3E24 /* Repository */ = {
@@ -403,6 +408,15 @@
 				704D277826A58C3B001D3E24 /* SearchModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		70B1AE9326EDE48900B15ADB /* SendReport */ = {
+			isa = PBXGroup;
+			children = (
+				70B1AE9426EDE4CB00B15ADB /* SendReportViewController.swift */,
+				70B1AE9626EDE4DD00B15ADB /* SendReportViewModel.swift */,
+			);
+			path = SendReport;
 			sourceTree = "<group>";
 		};
 		A6087BAFC6B4B9EC4100C842 /* Pods */ = {
@@ -543,11 +557,13 @@
 				704D279626A58D4C001D3E24 /* URLRequestLog.swift in Sources */,
 				704D279A26A58D69001D3E24 /* EndPoint.swift in Sources */,
 				704D277726A58C2D001D3E24 /* SearchRouter.swift in Sources */,
+				70B1AE9726EDE4DD00B15ADB /* SendReportViewModel.swift in Sources */,
 				704D277526A58C24001D3E24 /* SearchUseCases.swift in Sources */,
 				704D27A426A58DC6001D3E24 /* NTCTAButton.swift in Sources */,
 				704D27A226A58DB6001D3E24 /* UIViewController.swift in Sources */,
 				704D277F26A58C76001D3E24 /* SearchViewDelegate.swift in Sources */,
 				704D279D26A58D88001D3E24 /* LocationManagerImpl.swift in Sources */,
+				70B1AE9526EDE4CB00B15ADB /* SendReportViewController.swift in Sources */,
 				704D278826A58CC3001D3E24 /* SearchCollectionViewCell.swift in Sources */,
 				704D277B26A58C50001D3E24 /* SearchViewModelImpl.swift in Sources */,
 				704D278626A58CB2001D3E24 /* SearchCollectionViewDelegate.swift in Sources */,

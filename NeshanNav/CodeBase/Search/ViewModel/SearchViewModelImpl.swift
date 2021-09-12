@@ -18,7 +18,7 @@ class SearchViewModelImpl : SearchViewModel{
 
     let searchRepo:SearchLocationRepository
     
-    init(searchRepo:SearchLocationRepository = SearchLocationRepositoryImp()) {
+    init(searchRepo:SearchLocationRepository = SearchLocationRepositoryImpl()) {
         self.searchRepo = searchRepo
     }
     

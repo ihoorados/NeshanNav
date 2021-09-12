@@ -13,7 +13,7 @@ protocol SearchLocationRepository {
     func getLocationsOverNetwork(at location:Location,term:String,_ completion: @escaping FetchCompletion)
 }
 
-struct SearchLocationRepositoryImp: SearchLocationRepository {
+struct SearchLocationRepositoryImpl: SearchLocationRepository {
     
     private var Service:DataTaskDelegate
     init(service:DataTaskDelegate = DataTaskService()) {

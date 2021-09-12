@@ -32,9 +32,9 @@ class MapViewViewModelImpl{
     var searchRouter:SearchRouter?
     
     // MARK: init
-    init(routeInfoRepo: MapRoutesRepository = MapRoutesRepositoryImp(),
-         locationInfoRepo: LocationInfoRepository = LocationInfoRepositoryImp(),
-         distanceRepo:DistanceMatrixRepository = DistanceMatrixRepositoryImp()) {
+    init(routeInfoRepo: MapRoutesRepository = MapRoutesRepositoryImpl(),
+         locationInfoRepo: LocationInfoRepository = LocationInfoRepositoryImpl(),
+         distanceRepo:DistanceMatrixRepository = DistanceMatrixRepositoryImpl()) {
         routesRepo = routeInfoRepo
         locationRepo = locationInfoRepo
         routeDistanceRepo = distanceRepo
