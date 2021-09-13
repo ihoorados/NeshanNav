@@ -38,7 +38,7 @@ extension ReportCollectionView : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let cellSize = (self.reportBoxCollectionView.frame.width - 32) / 3
-        return CGSize(width: cellSize, height: cellSize + 40)
+        return CGSize(width: cellSize, height: cellSize + 30)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

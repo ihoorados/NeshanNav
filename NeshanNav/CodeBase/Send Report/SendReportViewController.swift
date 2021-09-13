@@ -55,6 +55,13 @@ class SendReportViewController: UIViewController {
         return view
     }()
     
+    lazy var backButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "ic_arrow_back_black_24dp"), for: .normal)
+        button.imageView?.tintColor = .white
+        return button
+    }()
+    
     /* ////////////////////////////////////////////////////////////////////// */
     // MARK: UI View
     /* ////////////////////////////////////////////////////////////////////// */
@@ -62,11 +69,15 @@ class SendReportViewController: UIViewController {
     func setupUIView(){
         
         self.view.addSubview(BoardContainerView)
+        self.view.addSubview(backButton)
     }
     
     func setupUILayout(){
         
-        BoardContainerView.anchor(top: self.view.topAnchor,
+        backButton.anchor(top: self.view.topAnchor,
+                          left: self.view.leftAnchor, width: 30, height: 30)
+        
+        BoardContainerView.anchor(top: backButton.bottomAnchor,
                                   left: self.view.leftAnchor,
                                   bottom: self.view.bottomAnchor,
                                   right: self.view.rightAnchor,
