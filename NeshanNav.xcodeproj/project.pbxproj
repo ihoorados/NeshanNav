@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4D7E99C4371E24A4D125127E /* Pods_NeshanNav.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F371B7A1DE9F42754E5F5C /* Pods_NeshanNav.framework */; };
-		70222A2D26EF1F640013C4F7 /* ReportCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70222A2C26EF1F640013C4F7 /* ReportCollectionView.swift */; };
-		70222A3026EF1FDB0013C4F7 /* ReportUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70222A2F26EF1FDB0013C4F7 /* ReportUICollectionView.swift */; };
-		70222A3226EF20900013C4F7 /* ReportItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70222A3126EF20900013C4F7 /* ReportItemsCell.swift */; };
 		7023487726A586200018B60A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023487626A586200018B60A /* AppDelegate.swift */; };
 		7023487926A586200018B60A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023487826A586200018B60A /* SceneDelegate.swift */; };
 		7023487E26A586200018B60A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7023487C26A586200018B60A /* Main.storyboard */; };
@@ -67,13 +64,13 @@
 		70B1AE9926EE59F500B15ADB /* SendReportUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1AE9826EE59F500B15ADB /* SendReportUIDelegate.swift */; };
 		70B1AE9B26EE5BA700B15ADB /* SendReportUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1AE9A26EE5BA700B15ADB /* SendReportUseCases.swift */; };
 		70B1AE9D26EE5C2E00B15ADB /* SendReportRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1AE9C26EE5C2E00B15ADB /* SendReportRouter.swift */; };
+		70FB0D6126EF28690047E0BD /* ReportCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FB0D6026EF28690047E0BD /* ReportCollectionView.swift */; };
+		70FB0D6326EF287B0047E0BD /* ReportUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FB0D6226EF287B0047E0BD /* ReportUICollectionView.swift */; };
+		70FB0D6526EF288E0047E0BD /* ReportItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FB0D6426EF288E0047E0BD /* ReportItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		193DC77630801FA0314E35BA /* Pods-NeshanNav.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeshanNav.debug.xcconfig"; path = "Target Support Files/Pods-NeshanNav/Pods-NeshanNav.debug.xcconfig"; sourceTree = "<group>"; };
-		70222A2C26EF1F640013C4F7 /* ReportCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCollectionView.swift; sourceTree = "<group>"; };
-		70222A2F26EF1FDB0013C4F7 /* ReportUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportUICollectionView.swift; sourceTree = "<group>"; };
-		70222A3126EF20900013C4F7 /* ReportItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportItemsCell.swift; sourceTree = "<group>"; };
 		7023487326A586200018B60A /* NeshanNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeshanNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7023487626A586200018B60A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7023487826A586200018B60A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +131,9 @@
 		70B1AE9826EE59F500B15ADB /* SendReportUIDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendReportUIDelegate.swift; sourceTree = "<group>"; };
 		70B1AE9A26EE5BA700B15ADB /* SendReportUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendReportUseCases.swift; sourceTree = "<group>"; };
 		70B1AE9C26EE5C2E00B15ADB /* SendReportRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendReportRouter.swift; sourceTree = "<group>"; };
+		70FB0D6026EF28690047E0BD /* ReportCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCollectionView.swift; sourceTree = "<group>"; };
+		70FB0D6226EF287B0047E0BD /* ReportUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportUICollectionView.swift; sourceTree = "<group>"; };
+		70FB0D6426EF288E0047E0BD /* ReportItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportItemCell.swift; sourceTree = "<group>"; };
 		A3EC6B53FCABAD45F9A4B5FB /* Pods-NeshanNav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeshanNav.release.xcconfig"; path = "Target Support Files/Pods-NeshanNav/Pods-NeshanNav.release.xcconfig"; sourceTree = "<group>"; };
 		F2F371B7A1DE9F42754E5F5C /* Pods_NeshanNav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeshanNav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -150,28 +150,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		70222A2B26EF1F2A0013C4F7 /* ReportCollection */ = {
-			isa = PBXGroup;
-			children = (
-				70222A2C26EF1F640013C4F7 /* ReportCollectionView.swift */,
-				70222A2E26EF1FBF0013C4F7 /* CollectionView */,
-			);
-			name = ReportCollection;
-			path = NeshanNav/CodeBase/ReportCollection;
-			sourceTree = SOURCE_ROOT;
-		};
-		70222A2E26EF1FBF0013C4F7 /* CollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				70222A2F26EF1FDB0013C4F7 /* ReportUICollectionView.swift */,
-				70222A3126EF20900013C4F7 /* ReportItemsCell.swift */,
-			);
-			path = CollectionView;
-			sourceTree = "<group>";
-		};
 		70222A3326EF236C0013C4F7 /* Report */ = {
 			isa = PBXGroup;
 			children = (
+				70FB0D6026EF28690047E0BD /* ReportCollectionView.swift */,
+				70FB0D6226EF287B0047E0BD /* ReportUICollectionView.swift */,
+				70FB0D6426EF288E0047E0BD /* ReportItemCell.swift */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -232,7 +216,6 @@
 		7023489026A588360018B60A /* CodeBase */ = {
 			isa = PBXGroup;
 			children = (
-				70222A2B26EF1F2A0013C4F7 /* ReportCollection */,
 				70222A3326EF236C0013C4F7 /* Report */,
 				70B1AE9326EDE48900B15ADB /* SendReport */,
 				704D274926A589E2001D3E24 /* Coordinator */,
@@ -593,6 +576,8 @@
 				70796EF226A80EE50095361C /* SearchViewModel.swift in Sources */,
 				704D276C26A58BC0001D3E24 /* BillboardUseCases.swift in Sources */,
 				704D27A026A58DA5001D3E24 /* UILayout.swift in Sources */,
+				70FB0D6526EF288E0047E0BD /* ReportItemCell.swift in Sources */,
+				70FB0D6126EF28690047E0BD /* ReportCollectionView.swift in Sources */,
 				704D279826A58D5A001D3E24 /* NetworkError.swift in Sources */,
 				7023487726A586200018B60A /* AppDelegate.swift in Sources */,
 				704D275626A58A8D001D3E24 /* MapViewViewModelImpl.swift in Sources */,
@@ -618,6 +603,7 @@
 				704D278F26A58CF6001D3E24 /* DistanceMatrixRepository.swift in Sources */,
 				704D279426A58D3C001D3E24 /* DataTaskService.swift in Sources */,
 				704D275126A58A57001D3E24 /* DistanceMatrixModel.swift in Sources */,
+				70FB0D6326EF287B0047E0BD /* ReportUICollectionView.swift in Sources */,
 				704D27A626A58DD8001D3E24 /* UITextField.swift in Sources */,
 				704D278126A58C84001D3E24 /* SearchViewTextFieldDelegate.swift in Sources */,
 				704D275426A58A7D001D3E24 /* MapViewModel.swift in Sources */,
@@ -625,10 +611,7 @@
 				704D277226A58BF0001D3E24 /* BillboardViewDelegate.swift in Sources */,
 				704D275B26A58AC0001D3E24 /* MapViewDelegate.swift in Sources */,
 				7023487926A586200018B60A /* SceneDelegate.swift in Sources */,
-				70222A3026EF1FDB0013C4F7 /* ReportUICollectionView.swift in Sources */,
 				704D279126A58D00001D3E24 /* SearchLocationRepository.swift in Sources */,
-				70222A2D26EF1F640013C4F7 /* ReportCollectionView.swift in Sources */,
-				70222A3226EF20900013C4F7 /* ReportItemsCell.swift in Sources */,
 				704D275926A58AA5001D3E24 /* MapView.swift in Sources */,
 				704D274F26A58A24001D3E24 /* RoutesModel.swift in Sources */,
 				704D277026A58BE6001D3E24 /* BillboardView.swift in Sources */,
