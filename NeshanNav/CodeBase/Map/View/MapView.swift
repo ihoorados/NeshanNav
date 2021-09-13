@@ -38,6 +38,10 @@ class MapView: UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         print("📱 MainView view did appear")
         initSetup()
+        
+        let vc = SendReportViewController()
+        vc.view.tag = 22
+        self.show(vc, sender: self)
     }
     
     

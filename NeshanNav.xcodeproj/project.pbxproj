@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4D7E99C4371E24A4D125127E /* Pods_NeshanNav.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F371B7A1DE9F42754E5F5C /* Pods_NeshanNav.framework */; };
+		70222A2D26EF1F640013C4F7 /* ReportCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70222A2C26EF1F640013C4F7 /* ReportCollectionView.swift */; };
+		70222A3026EF1FDB0013C4F7 /* ReportUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70222A2F26EF1FDB0013C4F7 /* ReportUICollectionView.swift */; };
+		70222A3226EF20900013C4F7 /* ReportItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70222A3126EF20900013C4F7 /* ReportItemsCell.swift */; };
 		7023487726A586200018B60A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023487626A586200018B60A /* AppDelegate.swift */; };
 		7023487926A586200018B60A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023487826A586200018B60A /* SceneDelegate.swift */; };
 		7023487E26A586200018B60A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7023487C26A586200018B60A /* Main.storyboard */; };
@@ -61,10 +64,16 @@
 		708A733226A96115000F27D3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708A733126A96115000F27D3 /* LocationManager.swift */; };
 		70B1AE9526EDE4CB00B15ADB /* SendReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1AE9426EDE4CB00B15ADB /* SendReportViewController.swift */; };
 		70B1AE9726EDE4DD00B15ADB /* SendReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1AE9626EDE4DD00B15ADB /* SendReportViewModel.swift */; };
+		70B1AE9926EE59F500B15ADB /* SendReportUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1AE9826EE59F500B15ADB /* SendReportUIDelegate.swift */; };
+		70B1AE9B26EE5BA700B15ADB /* SendReportUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1AE9A26EE5BA700B15ADB /* SendReportUseCases.swift */; };
+		70B1AE9D26EE5C2E00B15ADB /* SendReportRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1AE9C26EE5C2E00B15ADB /* SendReportRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		193DC77630801FA0314E35BA /* Pods-NeshanNav.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeshanNav.debug.xcconfig"; path = "Target Support Files/Pods-NeshanNav/Pods-NeshanNav.debug.xcconfig"; sourceTree = "<group>"; };
+		70222A2C26EF1F640013C4F7 /* ReportCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCollectionView.swift; sourceTree = "<group>"; };
+		70222A2F26EF1FDB0013C4F7 /* ReportUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportUICollectionView.swift; sourceTree = "<group>"; };
+		70222A3126EF20900013C4F7 /* ReportItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportItemsCell.swift; sourceTree = "<group>"; };
 		7023487326A586200018B60A /* NeshanNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeshanNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7023487626A586200018B60A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7023487826A586200018B60A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +131,9 @@
 		708A733126A96115000F27D3 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		70B1AE9426EDE4CB00B15ADB /* SendReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendReportViewController.swift; sourceTree = "<group>"; };
 		70B1AE9626EDE4DD00B15ADB /* SendReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendReportViewModel.swift; sourceTree = "<group>"; };
+		70B1AE9826EE59F500B15ADB /* SendReportUIDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendReportUIDelegate.swift; sourceTree = "<group>"; };
+		70B1AE9A26EE5BA700B15ADB /* SendReportUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendReportUseCases.swift; sourceTree = "<group>"; };
+		70B1AE9C26EE5C2E00B15ADB /* SendReportRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendReportRouter.swift; sourceTree = "<group>"; };
 		A3EC6B53FCABAD45F9A4B5FB /* Pods-NeshanNav.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeshanNav.release.xcconfig"; path = "Target Support Files/Pods-NeshanNav/Pods-NeshanNav.release.xcconfig"; sourceTree = "<group>"; };
 		F2F371B7A1DE9F42754E5F5C /* Pods_NeshanNav.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeshanNav.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -138,6 +150,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70222A2B26EF1F2A0013C4F7 /* ReportCollection */ = {
+			isa = PBXGroup;
+			children = (
+				70222A2C26EF1F640013C4F7 /* ReportCollectionView.swift */,
+				70222A2E26EF1FBF0013C4F7 /* CollectionView */,
+			);
+			name = ReportCollection;
+			path = NeshanNav/CodeBase/ReportCollection;
+			sourceTree = SOURCE_ROOT;
+		};
+		70222A2E26EF1FBF0013C4F7 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				70222A2F26EF1FDB0013C4F7 /* ReportUICollectionView.swift */,
+				70222A3126EF20900013C4F7 /* ReportItemsCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		70222A3326EF236C0013C4F7 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
 		7023486A26A586200018B60A = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +232,8 @@
 		7023489026A588360018B60A /* CodeBase */ = {
 			isa = PBXGroup;
 			children = (
+				70222A2B26EF1F2A0013C4F7 /* ReportCollection */,
+				70222A3326EF236C0013C4F7 /* Report */,
 				70B1AE9326EDE48900B15ADB /* SendReport */,
 				704D274926A589E2001D3E24 /* Coordinator */,
 				704D274C26A58A04001D3E24 /* Map */,
@@ -414,7 +454,10 @@
 			isa = PBXGroup;
 			children = (
 				70B1AE9426EDE4CB00B15ADB /* SendReportViewController.swift */,
+				70B1AE9826EE59F500B15ADB /* SendReportUIDelegate.swift */,
 				70B1AE9626EDE4DD00B15ADB /* SendReportViewModel.swift */,
+				70B1AE9A26EE5BA700B15ADB /* SendReportUseCases.swift */,
+				70B1AE9C26EE5C2E00B15ADB /* SendReportRouter.swift */,
 			);
 			path = SendReport;
 			sourceTree = "<group>";
@@ -544,6 +587,7 @@
 			files = (
 				704D278D26A58CED001D3E24 /* LocationInfoRepository.swift in Sources */,
 				704D278426A58CA3001D3E24 /* SearchCollectionViewDataSource.swift in Sources */,
+				70B1AE9926EE59F500B15ADB /* SendReportUIDelegate.swift in Sources */,
 				704D274B26A589F5001D3E24 /* AppCoordinator.swift in Sources */,
 				704D277D26A58C5E001D3E24 /* SearchView.swift in Sources */,
 				70796EF226A80EE50095361C /* SearchViewModel.swift in Sources */,
@@ -555,6 +599,7 @@
 				704D278B26A58CE3001D3E24 /* MapRoutesRepository.swift in Sources */,
 				708A733226A96115000F27D3 /* LocationManager.swift in Sources */,
 				704D279626A58D4C001D3E24 /* URLRequestLog.swift in Sources */,
+				70B1AE9B26EE5BA700B15ADB /* SendReportUseCases.swift in Sources */,
 				704D279A26A58D69001D3E24 /* EndPoint.swift in Sources */,
 				704D277726A58C2D001D3E24 /* SearchRouter.swift in Sources */,
 				70B1AE9726EDE4DD00B15ADB /* SendReportViewModel.swift in Sources */,
@@ -564,6 +609,7 @@
 				704D277F26A58C76001D3E24 /* SearchViewDelegate.swift in Sources */,
 				704D279D26A58D88001D3E24 /* LocationManagerImpl.swift in Sources */,
 				70B1AE9526EDE4CB00B15ADB /* SendReportViewController.swift in Sources */,
+				70B1AE9D26EE5C2E00B15ADB /* SendReportRouter.swift in Sources */,
 				704D278826A58CC3001D3E24 /* SearchCollectionViewCell.swift in Sources */,
 				704D277B26A58C50001D3E24 /* SearchViewModelImpl.swift in Sources */,
 				704D278626A58CB2001D3E24 /* SearchCollectionViewDelegate.swift in Sources */,
@@ -579,7 +625,10 @@
 				704D277226A58BF0001D3E24 /* BillboardViewDelegate.swift in Sources */,
 				704D275B26A58AC0001D3E24 /* MapViewDelegate.swift in Sources */,
 				7023487926A586200018B60A /* SceneDelegate.swift in Sources */,
+				70222A3026EF1FDB0013C4F7 /* ReportUICollectionView.swift in Sources */,
 				704D279126A58D00001D3E24 /* SearchLocationRepository.swift in Sources */,
+				70222A2D26EF1F640013C4F7 /* ReportCollectionView.swift in Sources */,
+				70222A3226EF20900013C4F7 /* ReportItemsCell.swift in Sources */,
 				704D275926A58AA5001D3E24 /* MapView.swift in Sources */,
 				704D274F26A58A24001D3E24 /* RoutesModel.swift in Sources */,
 				704D277026A58BE6001D3E24 /* BillboardView.swift in Sources */,

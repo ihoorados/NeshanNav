@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+protocol SendReportViewModel: AnyObject {
+    var items: [ReportType] { get set }
+}
+
+class SendReportViewModelImpl: SendReportViewModel {
+    
+    var items: [ReportType]
+    
+    init() {
+        items = [ReportType.init()]
+    }
+}
