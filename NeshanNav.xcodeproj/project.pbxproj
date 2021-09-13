@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D7E99C4371E24A4D125127E /* Pods_NeshanNav.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F371B7A1DE9F42754E5F5C /* Pods_NeshanNav.framework */; };
+		7005814B26EF35F900A968AC /* SectionHeaderWithImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7005814A26EF35F900A968AC /* SectionHeaderWithImageCell.swift */; };
 		7023487726A586200018B60A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023487626A586200018B60A /* AppDelegate.swift */; };
 		7023487926A586200018B60A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023487826A586200018B60A /* SceneDelegate.swift */; };
 		7023487E26A586200018B60A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7023487C26A586200018B60A /* Main.storyboard */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		193DC77630801FA0314E35BA /* Pods-NeshanNav.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeshanNav.debug.xcconfig"; path = "Target Support Files/Pods-NeshanNav/Pods-NeshanNav.debug.xcconfig"; sourceTree = "<group>"; };
+		7005814A26EF35F900A968AC /* SectionHeaderWithImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderWithImageCell.swift; sourceTree = "<group>"; };
 		7023487326A586200018B60A /* NeshanNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeshanNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7023487626A586200018B60A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7023487826A586200018B60A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,14 +152,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		70222A3326EF236C0013C4F7 /* Report */ = {
+		70222A3326EF236C0013C4F7 /* Report CollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				70FB0D6026EF28690047E0BD /* ReportCollectionView.swift */,
 				70FB0D6226EF287B0047E0BD /* ReportUICollectionView.swift */,
 				70FB0D6426EF288E0047E0BD /* ReportItemCell.swift */,
+				7005814A26EF35F900A968AC /* SectionHeaderWithImageCell.swift */,
 			);
-			path = Report;
+			path = "Report CollectionView";
 			sourceTree = "<group>";
 		};
 		7023486A26A586200018B60A = {
@@ -216,8 +219,8 @@
 		7023489026A588360018B60A /* CodeBase */ = {
 			isa = PBXGroup;
 			children = (
-				70222A3326EF236C0013C4F7 /* Report */,
-				70B1AE9326EDE48900B15ADB /* SendReport */,
+				70222A3326EF236C0013C4F7 /* Report CollectionView */,
+				70B1AE9326EDE48900B15ADB /* Send Report */,
 				704D274926A589E2001D3E24 /* Coordinator */,
 				704D274C26A58A04001D3E24 /* Map */,
 				704D276A26A58BA8001D3E24 /* Billboard */,
@@ -433,16 +436,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		70B1AE9326EDE48900B15ADB /* SendReport */ = {
+		70B1AE9326EDE48900B15ADB /* Send Report */ = {
 			isa = PBXGroup;
 			children = (
 				70B1AE9426EDE4CB00B15ADB /* SendReportViewController.swift */,
 				70B1AE9826EE59F500B15ADB /* SendReportUIDelegate.swift */,
 				70B1AE9626EDE4DD00B15ADB /* SendReportViewModel.swift */,
-				70B1AE9A26EE5BA700B15ADB /* SendReportUseCases.swift */,
 				70B1AE9C26EE5C2E00B15ADB /* SendReportRouter.swift */,
+				70B1AE9A26EE5BA700B15ADB /* SendReportUseCases.swift */,
 			);
-			path = SendReport;
+			path = "Send Report";
 			sourceTree = "<group>";
 		};
 		A6087BAFC6B4B9EC4100C842 /* Pods */ = {
@@ -612,6 +615,7 @@
 				704D275B26A58AC0001D3E24 /* MapViewDelegate.swift in Sources */,
 				7023487926A586200018B60A /* SceneDelegate.swift in Sources */,
 				704D279126A58D00001D3E24 /* SearchLocationRepository.swift in Sources */,
+				7005814B26EF35F900A968AC /* SectionHeaderWithImageCell.swift in Sources */,
 				704D275926A58AA5001D3E24 /* MapView.swift in Sources */,
 				704D274F26A58A24001D3E24 /* RoutesModel.swift in Sources */,
 				704D277026A58BE6001D3E24 /* BillboardView.swift in Sources */,

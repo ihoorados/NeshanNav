@@ -24,6 +24,9 @@ extension MapView: MapViewDelegate{
         DispatchQueue.main.async {
             self.mapView.setFocalPointPosition(loc, durationSeconds: 0.3)
         }
+        let vc = SendReportViewController()
+        vc.view.tag = 22
+        self.show(vc, sender: self)
     }
 
     // MARK: Add Route shape To MapView

@@ -26,6 +26,14 @@ class ReportCollectionView: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        setupUIView()
+        setupUILayout()
+        setupCollectionView()
+    }
+    
     
     /* ////////////////////////////////////////////////////////////////////// */
     // MARK: UI Properties
@@ -46,7 +54,32 @@ class ReportCollectionView: UIViewController {
         return CollectionView
     }()
     
+    /* ////////////////////////////////////////////////////////////////////// */
+    // MARK: Setup Function
+    /* ////////////////////////////////////////////////////////////////////// */
     
+    private func setupUIView() {
+        self.view.addSubview(reportBoxCollectionView)
+    }
+    
+    private func setupUILayout(){
+
+        reportBoxCollectionView.anchor(top: self.view.topAnchor,
+                                       left: self.view.leftAnchor,
+                                       bottom: self.view.bottomAnchor,
+                                       right: self.view.rightAnchor)
+        
+    }
+    
+    private func setupCollectionView() {
+        reportBoxCollectionView.register(ReportItemsCell.self, forCellWithReuseIdentifier: cellIdentifire)
+        reportBoxCollectionView.register(SectionHeaderWithTitleCVCell.self,
+                                          forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                          withReuseIdentifier: "headerView")
+        reportBoxCollectionView.dataSource = self
+        reportBoxCollectionView.delegate = self
+        
+    }
     
 
 }

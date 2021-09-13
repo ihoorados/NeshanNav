@@ -31,6 +31,6 @@ final class SendReportRouter: SendReportUseCases{
     /* ////////////////////////////////////////////////////////////////////// */
     
     func select(item: ReportType) {
-        delegate?.BoardRouteTo(item: item)
+        delegate?.BoardRouteTo()
     }
 }

@@ -9,7 +9,8 @@ import Foundation
 
 
 struct ReportType {
-    let item: String = ""
+    let text: String
+    let image: String
 }
 
 protocol SendReportUseCases: AnyObject  {

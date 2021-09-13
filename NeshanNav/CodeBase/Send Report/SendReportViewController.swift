@@ -31,7 +31,7 @@ class SendReportViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = .systemYellow
+        self.view.backgroundColor = #colorLiteral(red: 0.1647058824, green: 0.1725490196, blue: 0.2, alpha: 1)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,6 +39,7 @@ class SendReportViewController: UIViewController {
         
         setupUIView()
         setupUILayout()
+        BoardRouteTo()
     }
     
 
@@ -49,7 +50,7 @@ class SendReportViewController: UIViewController {
     // MARK: UI Views Properties
     lazy var BoardContainerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .clear
+        view.backgroundColor = #colorLiteral(red: 0.1647058824, green: 0.1725490196, blue: 0.2, alpha: 1)
         view.alpha = 1
         return view
     }()
@@ -68,8 +69,11 @@ class SendReportViewController: UIViewController {
         BoardContainerView.anchor(top: self.view.topAnchor,
                                   left: self.view.leftAnchor,
                                   bottom: self.view.bottomAnchor,
-                                  right: self.view.rightAnchor)
+                                  right: self.view.rightAnchor,
+                                  cornerRadius: 16.0)
     }
+    
+
     
 
 }

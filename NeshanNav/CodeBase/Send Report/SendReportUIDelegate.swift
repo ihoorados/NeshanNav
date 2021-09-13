@@ -9,15 +9,15 @@ import UIKit
 
 protocol BoardUIDelegate: AnyObject{
     
-    func BoardRouteTo(item: ReportType)
+    func BoardRouteTo()
 }
 
 extension SendReportViewController : BoardUIDelegate{
     
-    func BoardRouteTo(item: ReportType){
+    func BoardRouteTo(){
         removeChildVCs()
         // Add New Card
-        let vc = SendReportViewController()
+        let vc = ReportCollectionView()
         vc.view.tag = 22
         addVCToContainer(vc: vc, to: BoardContainerView, navigationTo: .left)
     }
