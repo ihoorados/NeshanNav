@@ -13,10 +13,10 @@ class SendReportViewController: UIViewController {
     // MARK: Dependency Injection
     /* ////////////////////////////////////////////////////////////////////// */
     
-    weak var viewModel: SendReportViewModel?
-    init(viewModel: SendReportViewModel = SendReportViewModelImpl()) {
+    //weak var viewModel: SendReportViewModel?
+    init(viewModel: SendReportViewModel) {
         
-        self.viewModel = viewModel
+        //self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -39,7 +39,8 @@ class SendReportViewController: UIViewController {
         
         setupUIView()
         setupUILayout()
-        BoardRouteTo()
+        setupUIEvent()
+        BoardRouteToMainList()
     }
     
 
@@ -57,7 +58,8 @@ class SendReportViewController: UIViewController {
     
     lazy var backButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "ic_arrow_back_black_24dp"), for: .normal)
+        let image = UIImage.init(systemName: "arrow.backward")?.withTintColor(.white)
+        button.setImage(image, for: .normal)
         button.imageView?.tintColor = .white
         return button
     }()
@@ -84,7 +86,13 @@ class SendReportViewController: UIViewController {
                                   cornerRadius: 16.0)
     }
     
-
+    fileprivate func setupUIEvent(){
+        
+        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+    }
     
+    @objc fileprivate func backButtonTapped(){
+        BoardBack()
+    }
 
 }

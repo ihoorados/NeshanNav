@@ -16,14 +16,43 @@ class SendReportViewModelImpl: SendReportViewModel {
     var items: [ReportType]
     
     init() {
-        items = [ReportType.init(text: "Accident", image: "report_event_1"),
-                 ReportType.init(text: "Camera", image: "report_event_2"),
-                 ReportType.init(text: "Traffic", image: "report_event_3"),
-                 ReportType.init(text: "Map bugs", image: "report_event_4"),
-                 ReportType.init(text: "Speed bump", image: "report_event_5"),
-                 ReportType.init(text: "Cop", image: "report_event_6"),
-                 ReportType.init(text: "Atmospheric", image: "report_event_7"),
-                 ReportType.init(text: "Path events", image: "report_event_8"),
-                 ReportType.init(text: "Locations", image: "report_event_9")]
+        
+        self.items = [ReportType.init(text: "Accident", image: "report_event_1"),
+                      ReportType.init(text: "Camera", image: "report_event_2"),
+                      ReportType.init(text: "Traffic", image: "report_event_3"),
+                      ReportType.init(text: "Map bugs", image: "report_event_4"),
+                      ReportType.init(text: "Speed bump", image: "report_event_5"),
+                      ReportType.init(text: "Cop", image: "report_event_6"),
+                      ReportType.init(text: "Atmospheric", image: "report_event_7"),
+                      ReportType.init(text: "Path events", image: "report_event_8"),
+                      ReportType.init(text: "Locations", image: "report_event_9")]
     }
+     
+    init(items: [ReportType]) {
+        self.items = items
+    }
+}
+
+
+extension SendReportViewModelImpl{
+    
+    func mainCollectionReportList() -> [ReportType]{
+        return [ReportType.init(text: "Accident", image: "report_event_1"),
+                ReportType.init(text: "Camera", image: "report_event_2"),
+                ReportType.init(text: "Traffic", image: "report_event_3"),
+                ReportType.init(text: "Map bugs", image: "report_event_4"),
+                ReportType.init(text: "Speed bump", image: "report_event_5"),
+                ReportType.init(text: "Cop", image: "report_event_6"),
+                ReportType.init(text: "Atmospheric", image: "report_event_7"),
+                ReportType.init(text: "Path events", image: "report_event_8"),
+                ReportType.init(text: "Locations", image: "report_event_9")]
+    }
+    
+    func AccidentCollectionReportList() -> [ReportType] {
+        return [ReportType.init(text: "Opposite line", image: "report_event_crash_other_side_view"),
+                ReportType.init(text: "Heavy", image: "report_event_crash_major_view"),
+                ReportType.init(text: "Light", image: "report_event_crash_minor_view")]
+    }
+    
+    
 }

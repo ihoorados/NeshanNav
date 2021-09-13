@@ -15,12 +15,8 @@ final class SendReportRouter: SendReportUseCases{
     /* ////////////////////////////////////////////////////////////////////// */
     
     weak var delegate: BoardUIDelegate?
-    private let viewModel: SendReportViewModel
     
-    init(viewModel:SendReportViewModel) {
-        
-        self.viewModel = viewModel
-    }
+    init() { }
     
     deinit {
         print("🗑 SendReportRouter: deinit frome memory.")
@@ -31,6 +27,7 @@ final class SendReportRouter: SendReportUseCases{
     /* ////////////////////////////////////////////////////////////////////// */
     
     func select(item: ReportType) {
-        delegate?.BoardRouteTo()
+        print(item)
+        delegate?.BoardRouteTo(item: item)
     }
 }

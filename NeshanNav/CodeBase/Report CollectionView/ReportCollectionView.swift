@@ -14,8 +14,19 @@ class ReportCollectionView: UIViewController {
     // MARK: Dependency Injection
     /* ////////////////////////////////////////////////////////////////////// */
     
-    let viewModel: SendReportViewModel = SendReportViewModelImpl()
-
+    var viewModel: SendReportViewModel
+    var delegate: SendReportUseCases
+    
+    init(delegate: SendReportUseCases, viewModel: SendReportViewModel) {
+        self.delegate = delegate
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     /* ////////////////////////////////////////////////////////////////////// */
     // MARK: Lifecycle
     /* ////////////////////////////////////////////////////////////////////// */
@@ -73,7 +84,7 @@ class ReportCollectionView: UIViewController {
     
     private func setupCollectionView() {
         reportBoxCollectionView.register(ReportItemsCell.self, forCellWithReuseIdentifier: cellIdentifire)
-        reportBoxCollectionView.register(SectionHeaderWithTitleCVCell.self,
+        reportBoxCollectionView.register(SectionHeaderCell.self,
                                           forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                           withReuseIdentifier: "headerView")
         reportBoxCollectionView.dataSource = self

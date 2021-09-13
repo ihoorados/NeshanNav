@@ -28,7 +28,7 @@ extension ReportCollectionView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        delegate.select(item: viewModel.items[indexPath.row])
     }
     
 }
@@ -50,7 +50,7 @@ extension ReportCollectionView : UICollectionViewDelegateFlowLayout {
         
         guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
                                                                                withReuseIdentifier: "headerView",
-                                                                               for: indexPath) as? SectionHeaderWithTitleCVCell else {
+                                                                               for: indexPath) as? SectionHeaderCell else {
             return UICollectionReusableView()
         }
         headerView.titleLabel.text = "Send Report"

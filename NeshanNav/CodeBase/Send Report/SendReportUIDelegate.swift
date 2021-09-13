@@ -9,17 +9,69 @@ import UIKit
 
 protocol BoardUIDelegate: AnyObject{
     
-    func BoardRouteTo()
+    func BoardRouteToMainList()
+    func BoardRouteTo(item: ReportType)
 }
 
 extension SendReportViewController : BoardUIDelegate{
     
-    func BoardRouteTo(){
+    func BoardRouteToMainList(){
+        
         removeChildVCs()
-        // Add New Card
-        let vc = ReportCollectionView()
+        let router = SendReportRouter()
+        router.delegate = self
+        let viewModel = SendReportViewModelImpl(items: self.mainCollectionReportList())
+        let vc = ReportCollectionView(delegate: router, viewModel: viewModel)
         vc.view.tag = 22
         addVCToContainer(vc: vc, to: BoardContainerView, navigationTo: .left)
+    }
+    
+    func BoardBack(){
+        
+        removeChildVCs()
+        let router = SendReportRouter()
+        router.delegate = self
+        let viewModel = SendReportViewModelImpl(items: self.mainCollectionReportList())
+        let vc = ReportCollectionView(delegate: router, viewModel: viewModel)
+        vc.view.tag = 22
+        addVCToContainer(vc: vc, to: BoardContainerView, navigationTo: .right)
+    }
+    
+    func BoardRouteTo(item: ReportType){
+        
+        var items : [ReportType]
+        switch item.text {
+        case "Accident":
+            items = AccidentCollectionReportList()
+        default:
+            items = mainCollectionReportList()
+        }
+        removeChildVCs()
+        let router = SendReportRouter()
+        router.delegate = self
+        let viewModel = SendReportViewModelImpl(items: items)
+        let vc = ReportCollectionView(delegate: router, viewModel: viewModel)
+        vc.view.tag = 22
+        addVCToContainer(vc: vc, to: BoardContainerView, navigationTo: .left)
+    }
+    
+    
+    func mainCollectionReportList() -> [ReportType]{
+        return [ReportType.init(text: "Accident", image: "report_event_1"),
+                ReportType.init(text: "Camera", image: "report_event_2"),
+                ReportType.init(text: "Traffic", image: "report_event_3"),
+                ReportType.init(text: "Map bugs", image: "report_event_4"),
+                ReportType.init(text: "Speed bump", image: "report_event_5"),
+                ReportType.init(text: "Cop", image: "report_event_6"),
+                ReportType.init(text: "Atmospheric", image: "report_event_7"),
+                ReportType.init(text: "Path events", image: "report_event_8"),
+                ReportType.init(text: "Locations", image: "report_event_9")]
+    }
+    
+    func AccidentCollectionReportList() -> [ReportType] {
+        return [ReportType.init(text: "Opposite line", image: "report_event_crash_other_side_view"),
+                ReportType.init(text: "Heavy", image: "report_event_crash_major_view"),
+                ReportType.init(text: "Light", image: "report_event_crash_minor_view")]
     }
     
 }
@@ -51,7 +103,7 @@ extension UIViewController{
             }
             view.addSubview(vc.view)
             vc.didMove(toParent: self)
-            UIView.animate(withDuration: 0.9, delay: 0.2,
+            UIView.animate(withDuration: 0.6, delay: 0.2,
                            usingSpringWithDamping: 0.6,
                            initialSpringVelocity: 0.8,
                            options: [.allowUserInteraction,.allowAnimatedContent,.curveEaseOut]) {

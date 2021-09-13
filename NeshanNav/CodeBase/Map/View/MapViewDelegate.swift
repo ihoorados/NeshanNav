@@ -23,10 +23,12 @@ extension MapView: MapViewDelegate{
     func cameraRouteToLocation(loc: NTLngLat) {
         DispatchQueue.main.async {
             self.mapView.setFocalPointPosition(loc, durationSeconds: 0.3)
+            
+            let vc = SendReportViewController(viewModel: SendReportViewModelImpl())
+            vc.view.tag = 22
+            self.show(vc, sender: self)
         }
-        let vc = SendReportViewController()
-        vc.view.tag = 22
-        self.show(vc, sender: self)
+
     }
 
     // MARK: Add Route shape To MapView

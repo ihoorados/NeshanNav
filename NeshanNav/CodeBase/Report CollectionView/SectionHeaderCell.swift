@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SectionHeaderWithTitleCVCell: UICollectionReusableView {
+class SectionHeaderCell: UICollectionReusableView {
     
     lazy var titleLabel:UILabel = {
        let label = UILabel()
