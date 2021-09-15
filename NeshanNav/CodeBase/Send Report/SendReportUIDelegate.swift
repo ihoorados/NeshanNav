@@ -43,6 +43,22 @@ extension SendReportViewController : BoardUIDelegate{
         switch item.text {
         case "Accident":
             items = AccidentCollectionReportList()
+        case "Camera":
+            items = CameraCollectionReportList()
+        case "Traffic":
+            items = AccidentCollectionReportList()
+        case "Map bugs":
+            items = AccidentCollectionReportList()
+        case "Speed bump":
+            items = AccidentCollectionReportList()
+        case "Cop":
+            items = AccidentCollectionReportList()
+        case "Atmospheric":
+            items = AccidentCollectionReportList()
+        case "Path events":
+            items = AccidentCollectionReportList()
+        case "Locations":
+            items = AccidentCollectionReportList()
         default:
             items = mainCollectionReportList()
         }
@@ -72,6 +88,11 @@ extension SendReportViewController : BoardUIDelegate{
         return [ReportType.init(text: "Opposite line", image: "report_event_crash_other_side_view"),
                 ReportType.init(text: "Heavy", image: "report_event_crash_major_view"),
                 ReportType.init(text: "Light", image: "report_event_crash_minor_view")]
+    }
+    
+    func CameraCollectionReportList() -> [ReportType] {
+        return [ReportType.init(text: "Red light", image: "report_map_camera_red_light_view"),
+                ReportType.init(text: "speed control", image: "report_map_camera_speed_view")]
     }
     
 }

@@ -22,8 +22,11 @@ extension ReportCollectionView: UICollectionViewDataSource {
         let cell = reportBoxCollectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifire, for: indexPath) as! ReportItemsCell
 
         cell.configureCell(item: viewModel.items[indexPath.row])
-        cell.layer.cornerRadius = 20
+        cell.layer.cornerRadius = 12
         cell.backgroundColor = .clear
+        
+        cell.layer.borderWidth = 1
+        cell.layer.borderColor = UIColor.yellow.cgColor
         return cell
     }
     
@@ -35,10 +38,17 @@ extension ReportCollectionView: UICollectionViewDataSource {
 
 extension ReportCollectionView : UICollectionViewDelegateFlowLayout {
     
+    
+    fileprivate func cellViewSize(numberOfItemInARow:Int) -> CGSize {
+        
+        let width = (Int(self.reportBoxCollectionView.frame.width) - 64) / numberOfItemInARow
+        return CGSize(width: width, height: width + 30)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let cellSize = (self.reportBoxCollectionView.frame.width - 32) / 3
-        return CGSize(width: cellSize, height: cellSize + 30)
+        
+        return cellViewSize(numberOfItemInARow: 3)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -56,8 +66,23 @@ extension ReportCollectionView : UICollectionViewDelegateFlowLayout {
         headerView.titleLabel.text = "Send Report"
         headerView.titleLabel.textAlignment = .center
         headerView.titleLabel.textColor = .white
-        headerView.titleLabel.font = UIFont.systemFont(ofSize: 21, weight: .semibold)
+        headerView.titleLabel.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
         return headerView
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+
+        //Where elements_count is the count of all your items in that
+        //Collection view...
+        let cellCount = CGFloat(viewModel.items.count)
+        if cellCount < 3{
+
+            //Calculate the right amount of padding to center the cells.
+            let padding = (cellViewSize(numberOfItemInARow: 3).width / 2) + 16
+            return UIEdgeInsets(top: 0, left: padding, bottom: 0, right: padding)
+        }
+        return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        //return UIEdgeInsets.zero
     }
 }
 

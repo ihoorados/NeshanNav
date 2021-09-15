@@ -48,11 +48,7 @@ extension SendReportViewModelImpl{
                 ReportType.init(text: "Locations", image: "report_event_9")]
     }
     
-    func AccidentCollectionReportList() -> [ReportType] {
-        return [ReportType.init(text: "Opposite line", image: "report_event_crash_other_side_view"),
-                ReportType.init(text: "Heavy", image: "report_event_crash_major_view"),
-                ReportType.init(text: "Light", image: "report_event_crash_minor_view")]
-    }
+
     
     
 }

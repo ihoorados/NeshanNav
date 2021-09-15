@@ -62,6 +62,8 @@ class ReportCollectionView: UIViewController {
         CollectionView.showsVerticalScrollIndicator = false
         CollectionView.showsHorizontalScrollIndicator = false
         CollectionView.backgroundColor = .clear
+        CollectionView.layer.borderWidth = 2
+        CollectionView.layer.borderColor = UIColor.yellow.cgColor
         return CollectionView
     }()
     
@@ -74,11 +76,20 @@ class ReportCollectionView: UIViewController {
     }
     
     private func setupUILayout(){
-
+        
+        let itemRow = CGFloat(viewModel.items.count / 3)
+        let cellSize = (self.view.frame.width - 64) / 3
+        let contentSize = (cellSize * itemRow) + 80
+        let fullSize = self.view.frame.height - 80
+        let freeSize = fullSize - contentSize
+        
         reportBoxCollectionView.anchor(top: self.view.topAnchor,
                                        left: self.view.leftAnchor,
                                        bottom: self.view.bottomAnchor,
-                                       right: self.view.rightAnchor)
+                                       right: self.view.rightAnchor,
+                                       paddingTop: freeSize/2,
+                                       paddingLeft: 0.0,
+                                       paddingRight: 0.0)
         
     }
     
